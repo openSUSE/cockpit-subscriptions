@@ -1,6 +1,6 @@
 import cockpit from 'cockpit';
 import { Form, Grid, FormGroup, TextInput, GridItem, ActionGroup, Button } from "@patternfly/react-core";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { EmptyStatePanel } from 'cockpit-components-empty-state';
 
 const _ = cockpit.gettext;
@@ -12,22 +12,22 @@ type RegisterFormData = {
 };
 
 type Props = {
-    submitCallback: any,
+    submitCallback: () => Promise<[boolean, string]>,
     formData: RegisterFormData,
-    setFormData: any,
+    setFormData: Dispatch<SetStateAction<RegisterFormData>>,
 };
 
 const RegisterCodeForm = ({ submitCallback, formData, setFormData }: Props) => {
     const [submitting, setSubmitting] = useState<boolean>(false);
 
-    const onValueChange = (fieldName: string, value: any) => {
+    const onValueChange = (fieldName: string, value: string|number) => {
         setFormData({ ...formData, [fieldName]: value });
     };
 
     const submit = () => {
         setSubmitting(true);
-        submitCallback().then((success: boolean) => {
-            if (success) {
+        submitCallback().then((result: [boolean, string]) => {
+            if (result[0]) {
                 setFormData({
                     registrationCode: "",
                     email: "",

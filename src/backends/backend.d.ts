@@ -10,7 +10,7 @@ type Extension = {
     expires_at?: string,
 }
 
-enum SubscriptionStatus {
+declare enum SubscriptionStatus {
     Active = "Active",
     Expired = "Expired",
     Unregistered = "Unregistered",
@@ -39,7 +39,7 @@ type CockpitSpawnError = {
     exit_signal: string | null,
 }
 
-enum SUSEConnectExitCodes {
+declare enum SUSEConnectExitCodes {
     ZyppBusy = 7,
 }
 

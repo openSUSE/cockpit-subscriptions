@@ -40,20 +40,20 @@ export const SubscriptionList = ({ subscriptions, loading, deactivate, activate 
                                 </Badge>
                                 {item.expires_at
                                     ? <Badge key="expires" className="pf-v5-u-mx-xs">
-                                        Expires: {format_date(item.expires_at)}
-                                      </Badge>
+                                      Expires: {format_date(item.expires_at)}
+                                    </Badge>
                                     : ""}
                             </FlexItem>
                             <FlexItem align={{ default: "alignRight" }}>
                                 {deactivate
                                     ? <Button onClick={() => deactivate(item)}>
-                                        Deactivate
-                                      </Button>
+                                      Deactivate
+                                    </Button>
                                     : ""}
                                 {activate
                                     ? <Button onClick={() => activate(item)}>
-                                        Activate
-                                      </Button>
+                                      Activate
+                                    </Button>
                                     : ""}
                             </FlexItem>
                         </Flex>
