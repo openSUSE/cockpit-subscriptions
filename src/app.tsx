@@ -58,7 +58,7 @@ export const Application = () => {
         updateSubscriptions();
     }, [updateSubscriptions, backend]);
 
-    const registerProduct = async (): Promise<[boolean, string]> => {
+    const registerProduct = useCallback(async (): Promise<[boolean, string]> => {
         console.debug("registering", formData);
         const result = await backend?.register(formData.registrationCode, formData.email, formData.product).then((result) => {
             if (result[0]) {
@@ -76,9 +76,9 @@ export const Application = () => {
         });
 
         return result || [false, ""];
-    };
+    }, [backend, Dialogs, formData, updateSubscriptions]);
 
-    const deactivateProduct = (subscription: Subscription | Extension): void => {
+    const deactivateProduct = useCallback((subscription: Subscription | Extension): void => {
         console.log("deregistering", subscription.identifier);
         setLoadingSubscriptions(true);
         backend?.deregister([subscription.identifier, subscription.version, subscription.arch].join("/"))
@@ -96,9 +96,9 @@ export const Application = () => {
                     setLoadingSubscriptions(false);
                     updateSubscriptions();
                 });
-    };
+    }, [backend, Dialogs, updateSubscriptions]);
 
-    const activateProduct = (subscription: Subscription | Extension): void => {
+    const activateProduct = useCallback((subscription: Subscription | Extension): void => {
         console.log("activating", subscription.identifier);
         setLoadingExtensions(true);
         backend?.register("", "", [subscription.identifier, subscription.version, subscription.arch].join("/"))
@@ -113,7 +113,7 @@ export const Application = () => {
                     setLoadingExtensions(false);
                     updateSubscriptions();
                 });
-    };
+    }, [backend, Dialogs, updateSubscriptions]);
 
     return (
         <Page>

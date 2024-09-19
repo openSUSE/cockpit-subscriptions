@@ -3,7 +3,7 @@ import { Backend, Subscription, CockpitSpawnError, SUSEConnectExitCodes, Extensi
 
 export class SuseConnect implements Backend {
     async getSubscriptions(): Promise<Subscription[]> {
-        let result;
+        let result = null;
         let retry = true;
         let tries = 0;
 
@@ -23,7 +23,10 @@ export class SuseConnect implements Backend {
                     });
         }
 
-        return result || [];
+        if (result)
+            return result;
+
+        throw new Error("Unable to get subscriptions");
     }
 
     async getSubscriptionsStatus(): Promise<string> {
@@ -33,7 +36,7 @@ export class SuseConnect implements Backend {
     }
 
     async getExtensions(): Promise<Extension[]> {
-        let result;
+        let result = null;
         let retry = true;
         let tries = 0;
 
@@ -53,7 +56,10 @@ export class SuseConnect implements Backend {
                     });
         }
 
-        return result || [];
+        if (result)
+            return result;
+
+        throw new Error("Unable to get extensions");
     }
 
     async getAvailableExtensions(): Promise<string> {

@@ -24,7 +24,10 @@ export class TransactionalUpdate implements Backend {
                     });
         }
 
-        return result || [];
+        if (result)
+            return result;
+
+        throw new Error("Unable to get subscriptions");
     }
 
     async getSubscriptionsStatus(): Promise<string> {
@@ -56,7 +59,10 @@ export class TransactionalUpdate implements Backend {
                     });
         }
 
-        return result || [];
+        if (result)
+            return result;
+
+        throw new Error("Unable to get extensions");
     }
 
     async getAvailableExtensions(): Promise<string> {

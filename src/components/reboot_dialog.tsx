@@ -10,7 +10,7 @@ export const RebootDialog = () => {
     const Dialogs = useDialogs();
 
     const reboot = () => {
-        cockpit.spawn(["reboot"], { superuser: "try" });
+        cockpit.spawn(["reboot"], { superuser: "require" });
     };
 
     return (
