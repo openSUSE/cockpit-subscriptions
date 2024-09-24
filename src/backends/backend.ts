@@ -10,7 +10,7 @@ type Extension = {
     expires_at?: string,
 }
 
-declare enum SubscriptionStatus {
+enum SubscriptionStatus {
     Active = "Active",
     Expired = "Expired",
     Unregistered = "Unregistered",
@@ -39,7 +39,7 @@ type CockpitSpawnError = {
     exit_signal: string | null,
 }
 
-declare enum SUSEConnectExitCodes {
+enum SUSEConnectExitCodes {
     ZyppBusy = 7,
 }
 
@@ -53,4 +53,4 @@ interface Backend {
     deregister(product?: string): Promise<string>;
 }
 
-export { Backend, Subscription, SubscriptionStatus, Extension, CockpitSpawnError, SUSEConnectExitCodes };
+export { Extension, SubscriptionStatus, Subscription, CockpitSpawnError, SUSEConnectExitCodes, Backend };

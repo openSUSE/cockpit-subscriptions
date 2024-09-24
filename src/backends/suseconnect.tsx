@@ -1,5 +1,5 @@
 import cockpit from 'cockpit';
-import { Backend, Subscription, CockpitSpawnError, SUSEConnectExitCodes, Extension } from './backend';
+import { Backend, CockpitSpawnError, Extension, Subscription, SUSEConnectExitCodes } from './backend';
 
 export class SuseConnect implements Backend {
     async getSubscriptions(): Promise<Subscription[]> {
