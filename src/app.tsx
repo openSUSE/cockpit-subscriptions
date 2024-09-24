@@ -20,6 +20,7 @@ export const Application = () => {
     const [formData, setFormData] = useState<RegisterFormData>({
         registrationCode: "",
         email: "",
+        proxy: "",
     });
 
     const Dialogs = useDialogs();
@@ -64,7 +65,7 @@ export const Application = () => {
 
     const registerProduct = useCallback(async (): Promise<[boolean, string]> => {
         console.debug("registering", formData);
-        const result = await backend?.register(formData.registrationCode, formData.email).then((result) => {
+        const result = await backend?.register(formData.registrationCode, formData.email, "", formData.proxy).then((result) => {
             if (result[0]) {
                 if (result[1].includes("Please reboot your machine")) {
                     // Show reboot modal
