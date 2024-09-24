@@ -68,7 +68,7 @@ export class SuseConnect implements Backend {
         return cockpit.spawn(["suseconnect", "--json", "-l"], { superuser: "require" });
     }
 
-    async register(reg_code: string, email: string, product: string): Promise<[boolean, string]> {
+    async register(reg_code: string, email: string, product: string, proxy: string): Promise<[boolean, string]> {
         console.debug("attempting to register system");
         let emailOption = "";
         if (email !== "") {
@@ -78,7 +78,11 @@ export class SuseConnect implements Backend {
         if (product !== "") {
             productOption = "-p " + product;
         }
-        console.log(["suseconnect", "-r", reg_code, emailOption, productOption].join(" "));
+        let proxyOption = "";
+        if (proxy !== "") {
+            proxyOption = "--url " + proxy;
+        }
+        console.log(["suseconnect", "-r", reg_code, emailOption, productOption, proxyOption].join(" "));
         return cockpit.spawn(["suseconnect", "-r", reg_code, emailOption, productOption], { superuser: "require" })
                 .then((result): [boolean, string] => {
                     console.debug("registration result", result);
