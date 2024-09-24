@@ -45,12 +45,17 @@ export const Application = () => {
                 .then((subscriptions) => {
                     setSubscriptions(subscriptions);
                     setLoadingSubscriptions(false);
-                });
-
-        backend.getExtensions()
-                .then((subscriptions) => {
-                    setUnregisteredSubscriptions(subscriptions);
-                    setLoadingExtensions(false);
+                })
+                .finally(() => {
+                    backend.getExtensions()
+                            .then((subscriptions) => {
+                                setUnregisteredSubscriptions(subscriptions);
+                                setLoadingExtensions(false);
+                            })
+                            .catch(() => {
+                                setUnregisteredSubscriptions([]);
+                                setLoadingExtensions(false);
+                            });
                 });
     }, [backend, setLoadingSubscriptions, setSubscriptions, setUnregisteredSubscriptions, setLoadingExtensions]);
 
