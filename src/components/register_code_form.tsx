@@ -8,7 +8,6 @@ const _ = cockpit.gettext;
 type RegisterFormData = {
     registrationCode: string,
     email: string,
-    product: string,
 };
 
 type Props = {
@@ -31,7 +30,6 @@ const RegisterCodeForm = ({ submitCallback, formData, setFormData }: Props) => {
                 setFormData({
                     registrationCode: "",
                     email: "",
-                    product: "",
                 });
             }
 
@@ -53,11 +51,6 @@ const RegisterCodeForm = ({ submitCallback, formData, setFormData }: Props) => {
                 <FormGroup label={_("Email")} fieldId="registration-code">
                     <TextInput
                         onChange={(_, value) => onValueChange("email", value)} value={formData.email}
-                    />
-                </FormGroup>
-                <FormGroup label={_("Product")} fieldId="product">
-                    <TextInput
-                        onChange={(_, value) => onValueChange("product", value)} value={formData.product}
                     />
                 </FormGroup>
                 <GridItem span={12}>
