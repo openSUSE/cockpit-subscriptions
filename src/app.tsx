@@ -11,6 +11,8 @@ import { SubscriptionList } from './components/subscription_list';
 import { useDialogs } from 'dialogs';
 import { RebootDialog } from './components/reboot_dialog';
 
+const _ = cockpit.gettext;
+
 export const Application = () => {
     const [backend, setBackend] = useState<Backend | null>(null);
     const [loadingSubscriptions, setLoadingSubscriptions] = useState<boolean>(true);
@@ -126,20 +128,20 @@ export const Application = () => {
         <Page>
             <PageSection variant={PageSectionVariants.light}>
                 <Card>
-                    <CardTitle>Register a new subscription</CardTitle>
+                    <CardTitle>{_("Register a new subscription")}</CardTitle>
                     <CardBody>
                         <RegisterCodeForm submitCallback={registerProduct} formData={formData} setFormData={setFormData} />
                     </CardBody>
                 </Card>
                 <Card>
-                    <CardTitle>Registered Subscriptions</CardTitle>
+                    <CardTitle>{_("Registered Subscriptions")}</CardTitle>
                     <CardBody>
                         <SubscriptionList subscriptions={subscriptions} loading={loadingSubscriptions} deactivate={deactivateProduct} />
                     </CardBody>
                 </Card>
                 {unregisteredSubscriptions.length
                     ? <Card>
-                        <CardTitle>Available Extensions</CardTitle>
+                        <CardTitle>{_("Available Extensions")}</CardTitle>
                         <CardBody>
                             <SubscriptionList subscriptions={unregisteredSubscriptions} loading={loadingExtensions} activate={activateProduct} />
                         </CardBody>

@@ -17,7 +17,7 @@ export const RebootDialog = () => {
         <Modal
             title={_("This requires a reboot")} variant="small" onClose={Dialogs.close} isOpen
             footer={
-                <Button className="pf-v5-u-m-0" onClick={reboot} variant="primary">Reboot</Button>
+                <Button className="pf-v5-u-m-0" onClick={reboot} variant="primary">{_("Reboot")}</Button>
             }
         >
             <p>{_("This requires a reboot to take effect, if you don't reboot now this change might not be included")}</p>
