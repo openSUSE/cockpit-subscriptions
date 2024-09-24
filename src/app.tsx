@@ -92,14 +92,16 @@ export const Application = () => {
                     if (output.includes("Can not deregister base product")) {
                         console.log("deregistering base");
                         output = await backend.deregister();
+                        setLoadingSubscriptions(false);
+                        updateSubscriptions();
                         console.log("base deregistered");
+                    } else {
+                        if (output.includes("Please reboot your machine")) {
+                            Dialogs.show(<RebootDialog />);
+                        }
+                        setLoadingSubscriptions(false);
+                        updateSubscriptions();
                     }
-                    if (output.includes("Please reboot your machine")) {
-                        Dialogs.show(<RebootDialog />);
-                    }
-                    console.log("deregistered");
-                    setLoadingSubscriptions(false);
-                    updateSubscriptions();
                 });
     }, [backend, Dialogs, updateSubscriptions]);
 
