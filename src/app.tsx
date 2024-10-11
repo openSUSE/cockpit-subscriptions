@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Card, CardBody, CardTitle } from "@patternfly/react-core/dist/esm/components/Card/index.js";
+import { Card, CardBody, CardHeader, CardTitle } from "@patternfly/react-core/dist/esm/components/Card/index.js";
 
 import cockpit from 'cockpit';
-import { Page, PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { Button, Page, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import { Backend, Extension, Subscription } from './backends/backend';
 import { TransactionalUpdate } from './backends/transactional-update';
 import { SuseConnect } from './backends/suseconnect';
