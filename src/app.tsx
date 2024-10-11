@@ -10,6 +10,7 @@ import { RegisterCodeForm, RegisterFormData } from './components/register_code_f
 import { SubscriptionList } from './components/subscription_list';
 import { useDialogs } from 'dialogs';
 import { RebootDialog } from './components/reboot_dialog';
+import { SettingsDialog } from './components/settings_dialog';
 
 const _ = cockpit.gettext;
 
@@ -22,7 +23,6 @@ export const Application = () => {
     const [formData, setFormData] = useState<RegisterFormData>({
         registrationCode: "",
         email: "",
-        proxy: "",
     });
 
     const Dialogs = useDialogs();
@@ -67,7 +67,7 @@ export const Application = () => {
 
     const registerProduct = useCallback(async (): Promise<[boolean, string]> => {
         console.debug("registering", formData);
-        const result = await backend?.register(formData.registrationCode, formData.email, "", formData.proxy).then((result) => {
+        const result = await backend?.register(formData.registrationCode, formData.email, "").then((result) => {
             if (result[0]) {
                 if (result[1].includes("Please reboot your machine")) {
                     // Show reboot modal
@@ -128,7 +128,16 @@ export const Application = () => {
         <Page>
             <PageSection variant={PageSectionVariants.light}>
                 <Card>
-                    <CardTitle>{_("Register a new subscription")}</CardTitle>
+                    <CardHeader actions={{
+                        actions: <Button
+variant="secondary" id="settings-button"
+                                    component="a"
+                                    onClick={() => Dialogs.show(<SettingsDialog />)}
+                        >{_("Edit Settings")}</Button>,
+                    }}
+                    >
+                        <CardTitle>{_("Register a new subscription")}</CardTitle>
+                    </CardHeader>
                     <CardBody>
                         <RegisterCodeForm submitCallback={registerProduct} formData={formData} setFormData={setFormData} />
                     </CardBody>
