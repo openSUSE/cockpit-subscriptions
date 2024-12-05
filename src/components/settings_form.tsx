@@ -95,9 +95,9 @@ const SettingsForm = ({ formData, setFormData }: Props) => {
                     label="Allow Insecure Proxies"
                 />
             </FormGroup>
-            <FormGroup label={_("Language (Country Code)")} fieldId="language">
+            <FormGroup label={_("Language")} fieldId="language">
                 <TextInput
-                    aria-label="Language (Country Code)"
+                    aria-label="Language"
                     onChange={(_, value) => onValueChange("language", value)} value={formData.language}
                     placeholder="en"
                 />
