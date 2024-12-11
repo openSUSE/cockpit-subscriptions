@@ -3,15 +3,14 @@
   <id>org.cockpit_project.subscriptions</id>
   <metadata_license>CC0-1.0</metadata_license>
   <name>Subscriptions</name>
-  <summary>Scaffolding for a cockpit module</summary>
+  <summary>A cockpit module for managing subscriptions</summary>
   <description>
     <p>
-      Scaffolding for a cockpit module.
+      A cockpit module for managing subscriptions
     </p>
   </description>
   <extends>org.cockpit_project.subscriptions</extends>
   <launchable type="cockpit-manifest">subscriptions</launchable>
-  <url type="homepage">https://github.com/cockpit-project/subscriptions</url>
-  <url type="bugtracker">https://github.com/cockpit-project/subscriptions/issues</url>
-  <update_contact>cockpit-devel_AT_lists.fedorahosted.org</update_contact>
+  <url type="homepage">todo</url>
+  <url type="bugtracker">todo</url>
 </component>
