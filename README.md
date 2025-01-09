@@ -1,7 +1,8 @@
 # cockpit-subscriptions
 
 This is a [Cockpit](https://cockpit-project.org/) module for managing SUSE
-product registrations.
+product registrations. It uses
+[Cockpit Starter Kit](https://github.com/cockpit-project/starter-kit) as a base
 
 ## Development dependencies
 
