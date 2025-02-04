@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>org.opensuse.cockpit-subscriptions</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Subscriptions</name>
+  <summary>A cockpit module for managing subscriptions</summary>
+  <description>
+    <p>
+      A cockpit module for managing subscriptions
+    </p>
+  </description>
+  <extends>org.cockpit_project.cockpit</extends>
+  <launchable type="cockpit-manifest">subscriptions</launchable>
+  <url type="homepage">https://github.com/openSUSE/cockpit-subscriptions</url>
+  <url type="bugtracker">https://github.com/openSUSE/cockpit-subscriptions</url>
+</component>
