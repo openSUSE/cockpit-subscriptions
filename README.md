@@ -71,7 +71,7 @@ remove manually the symlink:
 
 # Running eslint
 
-Cockpit Starter Kit uses [ESLint](https://eslint.org/) to automatically check
+This project uses [ESLint](https://eslint.org/) to automatically check
 JavaScript/TypeScript code style in `.js[x]` and `.ts[x]` files.
 
 eslint is executed as part of `test/static-code`, aka. `make codecheck`.
