@@ -4,7 +4,7 @@ Release: 1%{?dist}
 Summary: Cockpit module for managing and registering subscriptions
 License: LGPL-2.1-or-later
 
-Source0: ./cockpit-subscriptions-%{version}.tar.gz
+Source0: ./cockpit-subscriptions-%{version}.tar.xz
 BuildArch: noarch
 BuildRequires: local-npm-registry
 BuildRequires: nodejs >= 18
@@ -19,6 +19,7 @@ A Cockpit module for managing and registering subscriptions
 
 %prep
 %autosetup
+rm -f package-lock.json
 local-npm-registry %{_sourcedir} install --include=dev --ignore-scripts
 
 %build
