@@ -13,6 +13,9 @@ BuildRequires: appstream-glib
 BuildRequires: gettext
 
 Requires: cockpit-bridge
+Requires: suseconnect-ng
+
+%{NPM_PROVIDES}
 
 %description
 A Cockpit module for managing and registering subscriptions
