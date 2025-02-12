@@ -73,19 +73,17 @@ export class TransactionalUpdate implements Backend {
 
     async register(reg_code: string, email: string, product: string): Promise<[boolean, string]> {
         console.debug("attempting to register system");
-        let regOption = "";
+        const options = [];
         if (reg_code !== "") {
-            regOption = "-r " + reg_code;
+            options.push("-r", reg_code);
         }
-        let emailOption = "";
         if (email !== "") {
-            emailOption = "-e " + email;
+            options.push("-e", email);
         }
-        let productOption = "";
         if (product !== "") {
-            productOption = "-p " + product;
+            options.push("-p", product);
         }
-        return cockpit.spawn(["transactional-update", "--no-selfupdate", "-n", "-d", "register", regOption, emailOption, productOption], { superuser: "require" })
+        return cockpit.spawn(["transactional-update", "--no-selfupdate", "-n", "-d", "register", ...options], { superuser: "require" })
                 .then((result): [boolean, string] => {
                     console.debug("registration result", result);
                     return [result.includes("Successfully registered system"), result];
@@ -97,11 +95,11 @@ export class TransactionalUpdate implements Backend {
     }
 
     async deregister(product?: string): Promise<string> {
-        let productOption = "";
+        const options = [];
         if (product) {
-            productOption = "-p " + product;
+            options.push("-p", product);
         }
 
-        return cockpit.spawn(["transactional-update", "--no-selfupdate", "-d", "register", "-d", productOption], { superuser: "require" });
+        return cockpit.spawn(["transactional-update", "--no-selfupdate", "-d", "register", "-d", ...options], { superuser: "require" });
     }
 }

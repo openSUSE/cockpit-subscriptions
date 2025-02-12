@@ -70,33 +70,28 @@ export class SuseConnect implements Backend {
 
     async register(reg_code: string, email: string, product: string): Promise<[boolean, string]> {
         console.debug("attempting to register system");
-        let emailOption = "";
+        const options = [];
         if (email !== "") {
-            emailOption = "-e " + email;
+            options.push("-e", email);
         }
-        let productOption = "";
         if (product !== "") {
-            productOption = "-p " + product;
+            options.push("-p", product);
         }
-        console.log(["suseconnect", "-r", reg_code, emailOption, productOption].join(" "));
-        return cockpit.spawn(["suseconnect", "-r", reg_code, emailOption, productOption], { superuser: "require" })
+        console.log(["suseconnect", "-r", reg_code, ...options].join(" "));
+        return cockpit.spawn(["suseconnect", "-r", reg_code, ...options], { superuser: "require" })
                 .then((result): [boolean, string] => {
                     console.debug("registration result", result);
                     return [result.includes("Successfully registered system"), ""];
-                })
-                .catch((error: CockpitSpawnError, data?: string): [boolean, string] => {
-                    console.error("Failed to register system with", error);
-                    return [false, data || error.toString()];
                 });
     }
 
     async deregister(product?: string): Promise<string> {
-        let productOption = "";
+        const productOption = [];
         if (product) {
-            productOption = "-p " + product;
+            productOption.push('-p', product);
         }
 
-        console.log(["suseconnect", "-d", productOption].join(" "));
-        return cockpit.spawn(["suseconnect", "-d", productOption], { superuser: "require" });
+        console.log(["suseconnect", "-d", ...productOption].join(" "));
+        return cockpit.spawn(["suseconnect", "-d", ...productOption], { superuser: "require" });
     }
 }
