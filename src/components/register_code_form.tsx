@@ -55,7 +55,7 @@ const RegisterCodeForm = ({ submitCallback, formData, setFormData }: Props) => {
                 </FormGroup>
                 <GridItem span={12}>
                     <ActionGroup>
-                        <Button onClick={submit} variant="primary">{_("Activate")}</Button>
+                        <Button onClick={submit} variant="primary">{_("Register")}</Button>
                     </ActionGroup>
                 </GridItem>
             </Grid>

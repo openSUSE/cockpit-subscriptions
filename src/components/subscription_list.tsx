@@ -47,12 +47,12 @@ export const SubscriptionList = ({ subscriptions, loading, deactivate, activate 
                             <FlexItem align={{ default: "alignRight" }}>
                                 {deactivate
                                     ? <Button onClick={() => deactivate(item)}>
-                                        {_("Deactivate")}
+                                        {_("De-register")}
                                     </Button>
                                     : ""}
                                 {activate
                                     ? <Button onClick={() => activate(item)}>
-                                        {_("Activate")}
+                                        {_("Register")}
                                     </Button>
                                     : ""}
                             </FlexItem>
