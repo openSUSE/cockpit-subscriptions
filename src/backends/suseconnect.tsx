@@ -36,7 +36,7 @@ export class SuseConnect implements Backend {
     }
 
     async getExtensions(): Promise<Extension[]> {
-        let result = null;
+        let result;
         let retry = true;
         let tries = 0;
 
@@ -50,13 +50,16 @@ export class SuseConnect implements Backend {
                     })
                     .catch((error: CockpitSpawnError) => {
                         tries++;
-                        if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
+                        if (error.exit_status === SUSEConnectExitCodes.NotRegistered) {
+                            retry = false;
+                            result = [];
+                        } if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
                             retry = false;
                         }
                     });
         }
 
-        if (result)
+        if (result !== undefined)
             return result;
 
         throw new Error("Unable to get extensions");

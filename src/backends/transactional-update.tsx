@@ -53,13 +53,16 @@ export class TransactionalUpdate implements Backend {
                     })
                     .catch((error: CockpitSpawnError) => {
                         tries++;
-                        if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
+                        if (error.exit_status === SUSEConnectExitCodes.NotRegistered) {
+                            retry = false;
+                            result = [];
+                        } if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
                             retry = false;
                         }
                     });
         }
 
-        if (result)
+        if (result !== undefined)
             return result;
 
         throw new Error("Unable to get extensions");

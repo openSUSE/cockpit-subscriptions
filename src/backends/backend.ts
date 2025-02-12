@@ -40,6 +40,7 @@ type CockpitSpawnError = {
 }
 
 enum SUSEConnectExitCodes {
+    NotRegistered = 1,
     ZyppBusy = 7,
 }
 
