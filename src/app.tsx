@@ -37,6 +37,7 @@ export const Application = () => {
         email: "",
     });
     const [errors, setErrors] = useState<Notification[]>([]);
+    const [loadedSubscriptions, setLoadedSubscriptions] = useState<boolean>(false);
 
     const Dialogs = useDialogs();
 
@@ -89,8 +90,11 @@ export const Application = () => {
     }, [backend, setLoadingSubscriptions, setSubscriptions, setUnregisteredSubscriptions, setLoadingExtensions, errors]);
 
     useEffect(() => {
-        updateSubscriptions();
-    }, [updateSubscriptions, backend]);
+        if (!loadedSubscriptions && backend !== null) {
+            setLoadedSubscriptions(true);
+            updateSubscriptions();
+        }
+    }, [updateSubscriptions, loadedSubscriptions, setLoadingExtensions, backend]);
 
     const registerProduct = useCallback(async (): Promise<[boolean, string]> => {
         console.debug("registering", formData);
