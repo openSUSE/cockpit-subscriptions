@@ -68,7 +68,7 @@ export const Application = () => {
                         text: _("Failed to retrieve subscriptions"),
                         detail: output.toString(),
                     }]);
-                    setLoadingExtensions(false);
+                    setLoadingSubscriptions(false);
                 })
                 .finally(() => {
                     backend.getExtensions()
