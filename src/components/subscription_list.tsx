@@ -3,6 +3,8 @@ import React from "react";
 import { Badge, Button, Flex, FlexItem, List, ListItem } from "@patternfly/react-core";
 import { Extension, Subscription } from "../backends/backend";
 import { EmptyStatePanel } from "cockpit-components-empty-state";
+import { useDialogs } from 'dialogs';
+import { ConfirmationDialog } from './confirmation_dialog';
 
 const _ = cockpit.gettext;
 
@@ -14,6 +16,8 @@ type Props = {
 };
 
 export const SubscriptionList = ({ subscriptions, loading, deactivate, activate }: Props) => {
+    const Dialogs = useDialogs();
+
     const format_date = (date: string): string => {
         const dateObj = new Date(Date.parse(date));
 
@@ -46,7 +50,7 @@ export const SubscriptionList = ({ subscriptions, loading, deactivate, activate 
                             </FlexItem>
                             <FlexItem align={{ default: "alignRight" }}>
                                 {deactivate
-                                    ? <Button onClick={() => deactivate(item)}>
+                                    ? <Button onClick={() => Dialogs.show(<ConfirmationDialog title={_("Are you sure you want to de-register this system?")} callback={() => deactivate(item)}><p>{_("This action cannot be undone")}</p></ConfirmationDialog>)}>
                                         {_("De-register")}
                                     </Button>
                                     : ""}
