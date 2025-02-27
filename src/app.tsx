@@ -2,7 +2,7 @@ import React, { createContext, useCallback, useEffect, useState } from 'react';
 import { Card, CardBody, CardHeader, CardTitle } from "@patternfly/react-core/dist/esm/components/Card/index.js";
 
 import cockpit from 'cockpit';
-import { AlertGroup, AlertProps, Button, Page, PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { AlertGroup, AlertProps, Button, EmptyState, Page, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import { Backend, Extension, Subscription } from './backends/backend';
 import { TransactionalUpdate } from './backends/transactional-update';
 import { SuseConnect } from './backends/suseconnect';
@@ -12,6 +12,7 @@ import { useDialogs } from 'dialogs';
 import { RebootDialog } from './components/reboot_dialog';
 import { SettingsDialog } from './components/settings_dialog';
 import { InlineNotification } from 'cockpit-components-inline-notification.jsx';
+import { superuser } from 'superuser';
 
 const _ = cockpit.gettext;
 
@@ -40,6 +41,10 @@ export const Application = () => {
     const [loadedSubscriptions, setLoadedSubscriptions] = useState<boolean>(false);
 
     const Dialogs = useDialogs();
+
+    useEffect(() => {
+        superuser.reload_page_on_change();
+    }, []);
 
     useEffect(() => {
         cockpit.spawn(["test", "-e", "/sbin/transactional-update"], { err: "ignore" })
@@ -203,6 +208,19 @@ type={error.type || 'danger'} key={index}
             </AlertGroup>
         )
         : undefined;
+
+    if (!superuser.allowed)
+        return (
+            <Page>
+                <PageSection variant={PageSectionVariants.light}>
+                    <Card>
+                        <EmptyState>
+                            {_("Viewing or modifying subscriptions requires administrative access.")}
+                        </EmptyState>
+                    </Card>
+                </PageSection>
+            </Page>
+        );
 
     return (
         <ErrorsContext.Provider value={{ errors, setErrors }}>
