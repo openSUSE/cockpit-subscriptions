@@ -43,6 +43,7 @@ export const Application = () => {
     const Dialogs = useDialogs();
 
     useEffect(() => {
+        // If superuser status changes, force a reload to correct state
         superuser.reload_page_on_change();
     }, []);
 
