@@ -3,7 +3,7 @@
   "description": "A cockpit module to manage system subscriptions",
   "type": "module",
   "main": "index.js",
-  "repository": "todo",
+  "repository": "git@github.com:openSUSE/cockpit-subscriptions.git",
   "author": "",
   "license": "LGPL-2.1",
   "engines": {
