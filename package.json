@@ -1,6 +1,6 @@
 {
   "name": "cockpit-subscriptions",
-  "description": "Scaffolding for a cockpit module",
+  "description": "A cockpit module to manage system subscriptions",
   "type": "module",
   "main": "index.js",
   "repository": "todo",
