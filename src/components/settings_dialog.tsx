@@ -17,7 +17,7 @@ export const SettingsDialog = () => {
 
     return (
         <Modal
-            title={_("Settings")} variant="small" onClose={Dialogs.close} isOpen
+            title={_("Settings")} variant="small" onClose={() => Dialogs.close()} isOpen
         >
             <SettingsForm formData={formData} setFormData={setFormData} />
         </Modal>

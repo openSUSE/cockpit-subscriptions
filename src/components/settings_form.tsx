@@ -26,25 +26,25 @@ const SettingsForm = ({ formData, setFormData }: Props) => {
 
     const setFormFields = useCallback(() => {
         cockpit.file(suseconnect_path, { superuser: "required" }).read()
-                .then(content => {
-                    if (content) {
-                        const newFormData = { ...formData };
-                        const url = content.match(/^url: ?(.*?)$/m) || [];
-                        if (url.length === 2) {
-                            newFormData.url = url[1];
-                        }
-                        const language = content.match(/^language: ?(.*?)$/m) || [];
-                        if (language.length === 2) {
-                            newFormData.language = language[1];
-                        }
-                        const insecure = content.match(/^insecure: ?(.*?)$/m) || [];
-                        if (insecure.length === 2) {
-                            newFormData.insecure = insecure[1] === 'true';
-                        }
+                        .then(content => {
+                            if (content) {
+                                const newFormData = { ...formData };
+                                const url = content.match(/^url: ?(.*?)$/m) || [];
+                                if (url.length === 2) {
+                                    newFormData.url = url[1];
+                                }
+                                const language = content.match(/^language: ?(.*?)$/m) || [];
+                                if (language.length === 2) {
+                                    newFormData.language = language[1];
+                                }
+                                const insecure = content.match(/^insecure: ?(.*?)$/m) || [];
+                                if (insecure.length === 2) {
+                                    newFormData.insecure = insecure[1] === 'true';
+                                }
 
-                        setFormData(newFormData);
-                    }
-                });
+                                setFormData(newFormData);
+                            }
+                        });
     }, [formData, setFormData]);
 
     useEffect(() => {
@@ -65,15 +65,16 @@ const SettingsForm = ({ formData, setFormData }: Props) => {
         if (formData.insecure)
             contentLines.push("insecure: " + formData.insecure);
 
-        cockpit.file(suseconnect_path, { superuser: "required" }).replace(contentLines.join("\n") + "\n")
-                .then((result: string) => {
-                    if (result[0]) {
-                        setFormFields();
-                    }
+        cockpit.file(suseconnect_path, { superuser: "required" })
+                        .replace(contentLines.join("\n") + "\n")
+                        .then((result: string) => {
+                            if (result[0]) {
+                                setFormFields();
+                            }
 
-                    setSubmitting(false);
-                })
-                .catch((e) => console.log(e));
+                            setSubmitting(false);
+                        })
+                        .catch((e) => console.log(e));
     }, [setSubmitting, setFormFields, formData]);
 
     if (submitting)
