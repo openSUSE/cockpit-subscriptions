@@ -11,16 +11,16 @@ export class SuseConnect implements Backend {
         // so we need to implement some basic retrying
         while (retry && tries <= 20) {
             await this.getSubscriptionsStatus()
-                    .then((response) => {
-                        retry = false;
-                        result = JSON.parse(response).filter((product: Subscription) => product.status !== "Not Registered");
-                    })
-                    .catch((error: CockpitSpawnError) => {
-                        tries++;
-                        if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
-                            retry = false;
-                        }
-                    });
+                            .then((response) => {
+                                retry = false;
+                                result = JSON.parse(response).filter((product: Subscription) => product.status !== "Not Registered");
+                            })
+                            .catch((error: CockpitSpawnError) => {
+                                tries++;
+                                if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
+                                    retry = false;
+                                }
+                            });
         }
 
         if (result)
@@ -44,19 +44,19 @@ export class SuseConnect implements Backend {
         // so we need to implement some basic retrying
         while (retry && tries <= 20) {
             await this.getAvailableExtensions()
-                    .then((response) => {
-                        retry = false;
-                        result = (JSON.parse(response).extensions || []).filter((product: Extension) => product.free === true && product.available === true && product.activated === false);
-                    })
-                    .catch((error: CockpitSpawnError) => {
-                        tries++;
-                        if (error.exit_status === SUSEConnectExitCodes.NotRegistered) {
-                            retry = false;
-                            result = [];
-                        } if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
-                            retry = false;
-                        }
-                    });
+                            .then((response) => {
+                                retry = false;
+                                result = (JSON.parse(response).extensions || []).filter((product: Extension) => product.free === true && product.available === true && product.activated === false);
+                            })
+                            .catch((error: CockpitSpawnError) => {
+                                tries++;
+                                if (error.exit_status === SUSEConnectExitCodes.NotRegistered) {
+                                    retry = false;
+                                    result = [];
+                                } if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
+                                    retry = false;
+                                }
+                            });
         }
 
         if (result !== undefined)
@@ -82,10 +82,10 @@ export class SuseConnect implements Backend {
         }
         console.log(["suseconnect", "-r", reg_code, ...options].join(" "));
         return cockpit.spawn(["suseconnect", "-r", reg_code, ...options], { superuser: "require" })
-                .then((result): [boolean, string] => {
-                    console.debug("registration result", result);
-                    return [result.includes("Successfully registered system"), ""];
-                });
+                        .then((result): [boolean, string] => {
+                            console.debug("registration result", result);
+                            return [result.includes("Successfully registered system"), ""];
+                        });
     }
 
     async deregister(product?: string): Promise<string> {

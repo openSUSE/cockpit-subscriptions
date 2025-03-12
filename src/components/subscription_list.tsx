@@ -21,8 +21,7 @@ export const SubscriptionList = ({ subscriptions, loading, deactivate, activate 
     const format_date = (date: string): string => {
         const dateObj = new Date(Date.parse(date));
 
-        return dateObj.toISOString().split("T")[0].split("-").reverse()
-                .join('-');
+        return dateObj.toISOString().split("T")[0].split("-").reverse().join('-');
     };
 
     if (loading)
@@ -43,21 +42,27 @@ export const SubscriptionList = ({ subscriptions, loading, deactivate, activate 
                                     {item.arch}
                                 </Badge>
                                 {item.expires_at
-                                    ? <Badge key="expires" className="pf-v5-u-mx-xs">
-                                        {_("Expires:")} {format_date(item.expires_at)}
-                                    </Badge>
+                                    ? (
+                                        <Badge key="expires" className="pf-v5-u-mx-xs">
+                                            {_("Expires:")} {format_date(item.expires_at)}
+                                        </Badge>
+                                    )
                                     : ""}
                             </FlexItem>
                             <FlexItem align={{ default: "alignRight" }}>
                                 {deactivate
-                                    ? <Button onClick={() => Dialogs.show(<ConfirmationDialog title={_("Are you sure you want to de-register this system?")} callback={() => deactivate(item)}><p>{_("This action cannot be undone")}</p></ConfirmationDialog>)}>
-                                        {_("De-register")}
-                                    </Button>
+                                    ? (
+                                        <Button onClick={() => Dialogs.show(<ConfirmationDialog title={_("Are you sure you want to de-register this system?")} callback={() => deactivate(item)}><p>{_("This action cannot be undone")}</p></ConfirmationDialog>)}>
+                                            {_("De-register")}
+                                        </Button>
+                                    )
                                     : ""}
                                 {activate
-                                    ? <Button onClick={() => activate(item)}>
-                                        {_("Register")}
-                                    </Button>
+                                    ? (
+                                        <Button onClick={() => activate(item)}>
+                                            {_("Register")}
+                                        </Button>
+                                    )
                                     : ""}
                             </FlexItem>
                         </Flex>

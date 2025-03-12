@@ -12,16 +12,16 @@ export class TransactionalUpdate implements Backend {
         while (retry && tries <= 20) {
             console.log("attempting");
             await this.getSubscriptionsStatus()
-                    .then((response) => {
-                        retry = false;
-                        result = JSON.parse(response).filter((product: Subscription) => product.status !== "Not Registered");
-                    })
-                    .catch((error: CockpitSpawnError) => {
-                        tries++;
-                        if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
-                            retry = false;
-                        }
-                    });
+                            .then((response) => {
+                                retry = false;
+                                result = JSON.parse(response).filter((product: Subscription) => product.status !== "Not Registered");
+                            })
+                            .catch((error: CockpitSpawnError) => {
+                                tries++;
+                                if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
+                                    retry = false;
+                                }
+                            });
         }
 
         if (result)
@@ -46,20 +46,20 @@ export class TransactionalUpdate implements Backend {
         // so we need to implement some basic retrying
         while (retry && tries <= 20) {
             await this.getAvailableExtensions()
-                    .then((response) => {
-                        retry = false;
-                        result = (JSON.parse(response).extensions || []).filter((product: Extension) => product.free === true && product.available === true && product.activated === false);
-                        console.log("got extensions", result);
-                    })
-                    .catch((error: CockpitSpawnError) => {
-                        tries++;
-                        if (error.exit_status === SUSEConnectExitCodes.NotRegistered) {
-                            retry = false;
-                            result = [];
-                        } if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
-                            retry = false;
-                        }
-                    });
+                            .then((response) => {
+                                retry = false;
+                                result = (JSON.parse(response).extensions || []).filter((product: Extension) => product.free === true && product.available === true && product.activated === false);
+                                console.log("got extensions", result);
+                            })
+                            .catch((error: CockpitSpawnError) => {
+                                tries++;
+                                if (error.exit_status === SUSEConnectExitCodes.NotRegistered) {
+                                    retry = false;
+                                    result = [];
+                                } if (error.exit_status !== SUSEConnectExitCodes.ZyppBusy) {
+                                    retry = false;
+                                }
+                            });
         }
 
         if (result !== undefined)
@@ -87,14 +87,14 @@ export class TransactionalUpdate implements Backend {
             options.push("-p", product);
         }
         return cockpit.spawn(["transactional-update", "--no-selfupdate", "-n", "-d", "register", ...options], { superuser: "require" })
-                .then((result): [boolean, string] => {
-                    console.debug("registration result", result);
-                    return [result.includes("Successfully registered system"), result];
-                })
-                .catch((error: CockpitSpawnError, data?: string): [boolean, string] => {
-                    console.error("Failed to register system with", error);
-                    return [false, data || error.toString()];
-                });
+                        .then((result): [boolean, string] => {
+                            console.debug("registration result", result);
+                            return [result.includes("Successfully registered system"), result];
+                        })
+                        .catch((error: CockpitSpawnError, data?: string): [boolean, string] => {
+                            console.error("Failed to register system with", error);
+                            return [false, data || error.toString()];
+                        });
     }
 
     async deregister(product?: string): Promise<string> {

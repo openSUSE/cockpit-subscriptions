@@ -17,14 +17,14 @@ import { superuser } from 'superuser';
 const _ = cockpit.gettext;
 
 export type Notification = {
-  type: AlertProps["variant"],
-  text: string,
-  detail: string,
+    type: AlertProps["variant"],
+    text: string,
+    detail: string,
 };
 
-const ErrorsContext = createContext<{errors: Notification[], setErrors: React.Dispatch<React.SetStateAction<Notification[]>>}>({
+const ErrorsContext = createContext<{ errors: Notification[], setErrors: React.Dispatch<React.SetStateAction<Notification[]>> }>({
     errors: [],
-    setErrors: () => {},
+    setErrors: () => { },
 });
 
 export const Application = () => {
@@ -49,11 +49,11 @@ export const Application = () => {
 
     useEffect(() => {
         cockpit.spawn(["test", "-e", "/sbin/transactional-update"], { err: "ignore" })
-                .then(() => setBackend(new TransactionalUpdate()))
-                .catch(() => {
-                    cockpit.spawn(["test", "-e", "/usr/bin/suseconnect"], { err: "ignore" })
-                            .then(() => setBackend(new SuseConnect()));
-                });
+                        .then(() => setBackend(new TransactionalUpdate()))
+                        .catch(() => {
+                            cockpit.spawn(["test", "-e", "/usr/bin/suseconnect"], { err: "ignore" })
+                                            .then(() => setBackend(new SuseConnect()));
+                        });
     }, [setBackend]);
 
     const updateSubscriptions = useCallback(() => {
@@ -64,35 +64,35 @@ export const Application = () => {
 
         // handle get subscriptions
         backend.getSubscriptions()
-                .then((subscriptions) => {
-                    setSubscriptions(subscriptions);
-                    setLoadingSubscriptions(false);
-                })
-                .catch((output: Error) => {
-                    setErrors([...errors, {
-                        type: "danger",
-                        text: _("Failed to retrieve subscriptions"),
-                        detail: output.toString(),
-                    }]);
-                    setLoadingSubscriptions(false);
-                })
-                .finally(() => {
-                    backend.getExtensions()
-                            .then((subscriptions) => {
-                                setUnregisteredSubscriptions(subscriptions);
-                                setLoadingExtensions(false);
-                            })
-                            .catch((output: Error) => {
-                                console.log("failed to retreive extensions", output);
-                                setUnregisteredSubscriptions([]);
-                                setLoadingExtensions(false);
-                                setErrors([...errors, {
-                                    type: "danger",
-                                    text: _("Failed to retrieve extensions"),
-                                    detail: output.toString(),
-                                }]);
-                            });
-                });
+                        .then((subscriptions) => {
+                            setSubscriptions(subscriptions);
+                            setLoadingSubscriptions(false);
+                        })
+                        .catch((output: Error) => {
+                            setErrors([...errors, {
+                                type: "danger",
+                                text: _("Failed to retrieve subscriptions"),
+                                detail: output.toString(),
+                            }]);
+                            setLoadingSubscriptions(false);
+                        })
+                        .finally(() => {
+                            backend.getExtensions()
+                                            .then((subscriptions) => {
+                                                setUnregisteredSubscriptions(subscriptions);
+                                                setLoadingExtensions(false);
+                                            })
+                                            .catch((output: Error) => {
+                                                console.log("failed to retreive extensions", output);
+                                                setUnregisteredSubscriptions([]);
+                                                setLoadingExtensions(false);
+                                                setErrors([...errors, {
+                                                    type: "danger",
+                                                    text: _("Failed to retrieve extensions"),
+                                                    detail: output.toString(),
+                                                }]);
+                                            });
+                        });
     }, [backend, setLoadingSubscriptions, setSubscriptions, setUnregisteredSubscriptions, setLoadingExtensions, errors]);
 
     useEffect(() => {
@@ -115,14 +115,13 @@ export const Application = () => {
                 updateSubscriptions();
                 return result;
             }
-        })
-                .catch((output) => {
-                    setErrors([...errors, {
-                        type: "danger",
-                        text: _("Failed to register system"),
-                        detail: output.toString(),
-                    }]);
-                });
+        }).catch((output) => {
+            setErrors([...errors, {
+                type: "danger",
+                text: _("Failed to register system"),
+                detail: output.toString(),
+            }]);
+        });
 
         return result || [false, ""];
     }, [backend, Dialogs, formData, updateSubscriptions, errors]);
@@ -131,59 +130,59 @@ export const Application = () => {
         console.log("deregistering", subscription.identifier);
         setLoadingSubscriptions(true);
         backend?.deregister([subscription.identifier, subscription.version, subscription.arch].join("/"))
-                .then(async (output) => {
-                    if (output.includes("Please reboot your machine")) {
-                        Dialogs.show(<RebootDialog />);
-                    }
-                    setLoadingSubscriptions(false);
-                    updateSubscriptions();
-                })
-                .catch(async (output) => {
-                    // Can't deregister base product
-                    if (output.exit_status === 70) {
-                        output = backend.deregister().then(() => {
+                        .then(async (output) => {
+                            if (output.includes("Please reboot your machine")) {
+                                Dialogs.show(<RebootDialog />);
+                            }
                             setLoadingSubscriptions(false);
                             updateSubscriptions();
                         })
-                                .catch((output) => {
-                                    setErrors([...errors, {
-                                        type: "danger",
-                                        text: _("Failed to deactivate product"),
-                                        detail: output.toString(),
-                                    }]);
-                                });
-                    } else {
-                        setErrors([...errors, {
-                            type: "danger",
-                            text: _("Failed to deactivate product"),
-                            detail: output.toString(),
-                        }]);
-                    }
-                });
+                        .catch(async (output) => {
+                            // Can't deregister base product
+                            if (output.exit_status === 70) {
+                                output = backend.deregister().then(() => {
+                                    setLoadingSubscriptions(false);
+                                    updateSubscriptions();
+                                })
+                                                .catch((output) => {
+                                                    setErrors([...errors, {
+                                                        type: "danger",
+                                                        text: _("Failed to deactivate product"),
+                                                        detail: output.toString(),
+                                                    }]);
+                                                });
+                            } else {
+                                setErrors([...errors, {
+                                    type: "danger",
+                                    text: _("Failed to deactivate product"),
+                                    detail: output.toString(),
+                                }]);
+                            }
+                        });
     }, [backend, Dialogs, updateSubscriptions, errors]);
 
     const activateProduct = useCallback((subscription: Subscription | Extension): void => {
         console.log("activating", subscription.identifier);
         setLoadingExtensions(true);
         backend?.register("", "", [subscription.identifier, subscription.version, subscription.arch].join("/"))
-                .then(async (result) => {
-                    if (result[0]) {
-                        if (result[1].includes("Please reboot your machine")) {
-                        // Show reboot modal
-                            Dialogs.show(<RebootDialog />);
-                        }
-                    }
-                    console.log("activated");
-                    setLoadingExtensions(false);
-                    updateSubscriptions();
-                })
-                .catch((output) => {
-                    setErrors([...errors, {
-                        type: "danger",
-                        text: _("Failed to deactivate product"),
-                        detail: output.toString(),
-                    }]);
-                });
+                        .then(async (result) => {
+                            if (result[0]) {
+                                if (result[1].includes("Please reboot your machine")) {
+                                    // Show reboot modal
+                                    Dialogs.show(<RebootDialog />);
+                                }
+                            }
+                            console.log("activated");
+                            setLoadingExtensions(false);
+                            updateSubscriptions();
+                        })
+                        .catch((output) => {
+                            setErrors([...errors, {
+                                type: "danger",
+                                text: _("Failed to deactivate product"),
+                                detail: output.toString(),
+                            }]);
+                        });
     }, [backend, Dialogs, updateSubscriptions, errors]);
 
     const dismissErrorNotification = (index: number) => {
@@ -198,12 +197,13 @@ export const Application = () => {
                 {errors.map((error, index) => {
                     return (
                         <InlineNotification
-type={error.type || 'danger'} key={index}
+                            type={error.type || 'danger'} key={index}
                             isLiveRegion
                             isInline={false}
                             onDismiss={() => dismissErrorNotification(index)}
                             text={error.text}
-                            detail={error.detail} />
+                            detail={error.detail}
+                        />
                     );
                 })}
             </AlertGroup>
@@ -230,11 +230,15 @@ type={error.type || 'danger'} key={index}
                 <PageSection variant={PageSectionVariants.light}>
                     <Card>
                         <CardHeader actions={{
-                            actions: <Button
-    variant="secondary" id="settings-button"
+                            actions:
+                                (
+                                    <Button
+                                        variant="secondary" id="settings-button"
                                         component="a"
                                         onClick={() => Dialogs.show(<SettingsDialog />)}
-                            >{_("Edit Settings")}</Button>,
+                                    >{_("Edit Settings")}
+                                    </Button>
+                                ),
                         }}
                         >
                             <CardTitle>{_("Register a new subscription")}</CardTitle>
@@ -250,12 +254,14 @@ type={error.type || 'danger'} key={index}
                         </CardBody>
                     </Card>
                     {unregisteredSubscriptions.length
-                        ? <Card>
-                            <CardTitle>{_("Available Extensions")}</CardTitle>
-                            <CardBody>
-                                <SubscriptionList subscriptions={unregisteredSubscriptions} loading={loadingExtensions} activate={activateProduct} />
-                            </CardBody>
-                        </Card>
+                        ? (
+                            <Card>
+                                <CardTitle>{_("Available Extensions")}</CardTitle>
+                                <CardBody>
+                                    <SubscriptionList subscriptions={unregisteredSubscriptions} loading={loadingExtensions} activate={activateProduct} />
+                                </CardBody>
+                            </Card>
+                        )
                         : ""}
                 </PageSection>
             </Page>
