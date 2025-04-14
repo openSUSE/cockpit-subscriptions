@@ -1,0 +1,133 @@
+# #-#-#-#-#  cockpit-subscriptions.js.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# #-#-#-#-#  cockpit-subscriptions.metainfo.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"#-#-#-#-#  cockpit-subscriptions.html.pot (PACKAGE_VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE_VERSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Cockpit html2po\n"
+"#-#-#-#-#  cockpit-subscriptions.js.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-04 10:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  cockpit-subscriptions.manifest.pot (PACKAGE_VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE_VERSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Cockpit manifest2po\n"
+"#-#-#-#-#  cockpit-subscriptions.metainfo.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-14 12:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: org.opensuse.cockpit_subscriptions.metainfo.xml:6
+#: org.opensuse.cockpit_subscriptions.metainfo.xml:8
+msgid "A cockpit module for managing subscriptions"
+msgstr ""
+
+#: src/components/subscription_list.tsx:55
+#: src/components/register_code_form.tsx:58
+msgid "Activate"
+msgstr ""
+
+#: src/app.tsx:153
+msgid "Available Extensions"
+msgstr ""
+
+#: src/index.html:20
+msgid "Cockpit Subscriptions"
+msgstr ""
+
+#: src/components/subscription_list.tsx:50
+msgid "Deactivate"
+msgstr ""
+
+#: src/app.tsx:136
+msgid "Edit Settings"
+msgstr ""
+
+#: src/components/register_code_form.tsx:51
+msgid "Email"
+msgstr ""
+
+#: src/components/subscription_list.tsx:43
+msgid "Expires:"
+msgstr ""
+
+#: src/components/settings_form.tsx:99
+msgid "Language"
+msgstr ""
+
+#: src/components/subscription_list.tsx:25
+msgid "Loading Subscriptions"
+msgstr ""
+
+#: src/components/settings_form.tsx:84
+msgid "Proxy Url"
+msgstr ""
+
+#: src/components/reboot_dialog.tsx:20
+msgid "Reboot"
+msgstr ""
+
+#: src/app.tsx:139
+msgid "Register a new subscription"
+msgstr ""
+
+#: src/app.tsx:146
+msgid "Registered Subscriptions"
+msgstr ""
+
+#: src/components/register_code_form.tsx:46
+msgid "Registration Code"
+msgstr ""
+
+#: src/components/settings_dialog.tsx:20
+msgid "Settings"
+msgstr ""
+
+#: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
+msgid "Subscriptions"
+msgstr ""
+
+#: src/components/reboot_dialog.tsx:18
+msgid "This requires a reboot"
+msgstr ""
+
+#: src/components/reboot_dialog.tsx:23
+msgid ""
+"This requires a reboot to take effect, if you don't reboot now this change "
+"might not be included"
+msgstr ""
+
+#: src/components/settings_form.tsx:107
+msgid "save"
+msgstr ""
