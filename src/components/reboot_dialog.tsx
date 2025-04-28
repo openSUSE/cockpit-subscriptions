@@ -20,7 +20,7 @@ export const RebootDialog = () => {
                 <Button className="pf-v5-u-m-0" onClick={reboot} variant="primary">{_("Reboot")}</Button>
             }
         >
-            <p>{_("This requires a reboot to take effect, if you don't reboot now this change might not be included")}</p>
+            <p>{_("This requires a reboot to take effect. If you don't reboot now, this change might not be included")}</p>
         </Modal>
     );
 };
