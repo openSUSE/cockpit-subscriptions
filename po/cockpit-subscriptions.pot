@@ -22,7 +22,7 @@ msgstr ""
 "#-#-#-#-#  cockpit-subscriptions.js.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-04 10:03+0000\n"
+"POT-Creation-Date: 2025-04-30 08:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr ""
 "#-#-#-#-#  cockpit-subscriptions.metainfo.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 12:44+0100\n"
+"POT-Creation-Date: 2025-04-30 08:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,23 +54,30 @@ msgid "A cockpit module for managing subscriptions"
 msgstr ""
 
 #: src/components/subscription_list.tsx:55
-#: src/components/register_code_form.tsx:58
-msgid "Activate"
+msgid "Are you sure you want to de-register this system?"
 msgstr ""
 
-#: src/app.tsx:153
+#: src/app.tsx:259
 msgid "Available Extensions"
+msgstr ""
+
+#: src/components/confirmation_dialog.tsx:40
+msgid "Cancel"
 msgstr ""
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
 msgstr ""
 
-#: src/components/subscription_list.tsx:50
-msgid "Deactivate"
+#: src/components/subscription_list.tsx:56
+msgid "De-register"
 msgstr ""
 
-#: src/app.tsx:136
+#: src/components/confirmation_dialog.tsx:33
+msgid "Delete"
+msgstr ""
+
+#: src/app.tsx:239
 msgid "Edit Settings"
 msgstr ""
 
@@ -78,19 +85,35 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: src/components/subscription_list.tsx:43
+#: src/components/subscription_list.tsx:47
 msgid "Expires:"
 msgstr ""
 
-#: src/components/settings_form.tsx:99
+#: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
+msgid "Failed to deactivate product"
+msgstr ""
+
+#: src/app.tsx:121
+msgid "Failed to register system"
+msgstr ""
+
+#: src/app.tsx:91
+msgid "Failed to retrieve extensions"
+msgstr ""
+
+#: src/app.tsx:74
+msgid "Failed to retrieve subscriptions"
+msgstr ""
+
+#: src/components/settings_form.tsx:100
 msgid "Language"
 msgstr ""
 
-#: src/components/subscription_list.tsx:25
+#: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
 msgstr ""
 
-#: src/components/settings_form.tsx:84
+#: src/components/settings_form.tsx:85
 msgid "Proxy Url"
 msgstr ""
 
@@ -98,11 +121,16 @@ msgstr ""
 msgid "Reboot"
 msgstr ""
 
-#: src/app.tsx:139
+#: src/components/register_code_form.tsx:58
+#: src/components/subscription_list.tsx:63
+msgid "Register"
+msgstr ""
+
+#: src/app.tsx:244
 msgid "Register a new subscription"
 msgstr ""
 
-#: src/app.tsx:146
+#: src/app.tsx:251
 msgid "Registered Subscriptions"
 msgstr ""
 
@@ -118,16 +146,24 @@ msgstr ""
 msgid "Subscriptions"
 msgstr ""
 
+#: src/components/subscription_list.tsx:55
+msgid "This action cannot be undone"
+msgstr ""
+
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
 msgstr ""
 
 #: src/components/reboot_dialog.tsx:23
 msgid ""
-"This requires a reboot to take effect, if you don't reboot now this change "
+"This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr ""
 
-#: src/components/settings_form.tsx:107
+#: src/app.tsx:219
+msgid "Viewing or modifying subscriptions requires administrative access."
+msgstr ""
+
+#: src/components/settings_form.tsx:108
 msgid "save"
 msgstr ""
