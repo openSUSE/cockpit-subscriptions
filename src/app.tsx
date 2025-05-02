@@ -33,6 +33,7 @@ export const Application = () => {
     const [loadingExtensions, setLoadingExtensions] = useState<boolean>(true);
     const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
     const [unregisteredSubscriptions, setUnregisteredSubscriptions] = useState<Extension[]>([]);
+    const [isSuperuser, setIsSuperuser] = useState<boolean | null>(null);
     const [formData, setFormData] = useState<RegisterFormData>({
         registrationCode: "",
         email: "",
@@ -44,7 +45,7 @@ export const Application = () => {
 
     useEffect(() => {
         // If superuser status changes, force a reload to correct state
-        superuser.reload_page_on_change();
+        superuser.addEventListener("changed", () => isSuperuser !== superuser.allowed && setIsSuperuser(superuser.allowed || false));
     }, []);
 
     useEffect(() => {
@@ -209,7 +210,8 @@ export const Application = () => {
             </AlertGroup>
         )
         : undefined;
-    if (!superuser.allowed)
+
+    if (isSuperuser === false)
         return (
             <Page sidebar={emptySidebar}>
                 <PageSection variant={PageSectionVariants.light}>
