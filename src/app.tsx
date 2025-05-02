@@ -2,7 +2,7 @@ import React, { createContext, useCallback, useEffect, useState } from 'react';
 import { Card, CardBody, CardHeader, CardTitle } from "@patternfly/react-core/dist/esm/components/Card/index.js";
 
 import cockpit from 'cockpit';
-import { AlertGroup, AlertProps, Button, EmptyState, Page, PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { AlertGroup, AlertProps, Button, EmptyState, Page, PageSection, PageSectionVariants, PageSidebar } from '@patternfly/react-core';
 import { Backend, Extension, Subscription } from './backends/backend';
 import { TransactionalUpdate } from './backends/transactional-update';
 import { SuseConnect } from './backends/suseconnect';
@@ -15,7 +15,7 @@ import { InlineNotification } from 'cockpit-components-inline-notification.jsx';
 import { superuser } from 'superuser';
 
 const _ = cockpit.gettext;
-
+const emptySidebar = <PageSidebar isSidebarOpen={false} />;
 export type Notification = {
     type: AlertProps["variant"],
     text: string,
@@ -209,10 +209,9 @@ export const Application = () => {
             </AlertGroup>
         )
         : undefined;
-
     if (!superuser.allowed)
         return (
-            <Page>
+            <Page sidebar={emptySidebar}>
                 <PageSection variant={PageSectionVariants.light}>
                     <Card>
                         <EmptyState>
@@ -225,7 +224,7 @@ export const Application = () => {
 
     return (
         <ErrorsContext.Provider value={{ errors, setErrors }}>
-            <Page>
+            <Page sidebar={emptySidebar}>
                 {registrationErrors}
                 <PageSection variant={PageSectionVariants.light}>
                     <Card>
