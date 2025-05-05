@@ -35,15 +35,15 @@ export const SubscriptionList = ({ subscriptions, loading, deactivate, activate 
                         <Flex>
                             <FlexItem>
                                 {item.identifier}
-                                <Badge key="version" className="pf-v5-u-mx-xs">
+                                <Badge key="version" className="pf-v6-u-mx-xs">
                                     {item.version}
                                 </Badge>
-                                <Badge key="arch" className="pf-v5-u-mx-xs">
+                                <Badge key="arch" className="pf-v6-u-mx-xs">
                                     {item.arch}
                                 </Badge>
                                 {item.expires_at
                                     ? (
-                                        <Badge key="expires" className="pf-v5-u-mx-xs">
+                                        <Badge key="expires" className="pf-v6-u-mx-xs">
                                             {_("Expires:")} {format_date(item.expires_at)}
                                         </Badge>
                                     )
