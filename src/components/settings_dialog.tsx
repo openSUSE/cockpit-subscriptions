@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal } from '@patternfly/react-core';
+import { Modal, ModalHeader } from '@patternfly/react-core';
 import cockpit from 'cockpit';
 
 import { useDialogs } from 'dialogs.jsx';
@@ -19,7 +19,9 @@ export const SettingsDialog = () => {
         <Modal
             title={_("Settings")} variant="small" onClose={() => Dialogs.close()} isOpen
         >
-            <SettingsForm formData={formData} setFormData={setFormData} />
+            <ModalHeader>
+                <SettingsForm formData={formData} setFormData={setFormData} />
+            </ModalHeader>
         </Modal>
     );
 };
