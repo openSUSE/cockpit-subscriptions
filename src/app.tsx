@@ -216,7 +216,7 @@ export const Application = () => {
     if (isSuperuser === false)
         return (
             <Page sidebar={emptySidebar}>
-                <PageSection variant={PageSectionVariants.light}>
+                <PageSection variant={PageSectionVariants.default}>
                     <Card>
                         <EmptyState>
                             {_("Viewing or modifying subscriptions requires administrative access.")}
@@ -230,7 +230,7 @@ export const Application = () => {
         <ErrorsContext.Provider value={{ errors, setErrors }}>
             <Page sidebar={emptySidebar}>
                 {registrationErrors}
-                <PageSection variant={PageSectionVariants.light}>
+                <PageSection variant={PageSectionVariants.default}>
                     <Card>
                         <CardHeader actions={{
                             actions:
