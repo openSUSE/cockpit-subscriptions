@@ -49,7 +49,7 @@ const SettingsForm = ({ formData, setFormData }: Props) => {
 
     useEffect(() => {
         setFormFields();
-    }, [setFormData, setFormFields]);
+    }, []);
 
     const submit = useCallback(() => {
         setSubmitting(true);
