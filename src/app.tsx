@@ -45,8 +45,6 @@ export const Application = () => {
 
     useEffect(() => {
         // If superuser status changes, force a reload to correct state
-        // @ts-expect-error cockpit doesn't provide proper typing for superuser
-        // so for now we have to just ignore it.
         superuser.addEventListener("changed", () => isSuperuser !== superuser.allowed && setIsSuperuser(superuser.allowed || false));
     }, []);
 
