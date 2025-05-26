@@ -1,0 +1,145 @@
+# #-#-#-#-#  cockpit-subscriptions.js.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# #-#-#-#-#  cockpit-subscriptions.metainfo.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-30 08:59+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Cockpit manifest2po\n"
+
+#: org.opensuse.cockpit_subscriptions.metainfo.xml:6
+#: org.opensuse.cockpit_subscriptions.metainfo.xml:8
+msgid "A cockpit module for managing subscriptions"
+msgstr ""
+
+#: src/components/subscription_list.tsx:55
+msgid "Are you sure you want to de-register this system?"
+msgstr ""
+
+#: src/app.tsx:259
+msgid "Available Extensions"
+msgstr ""
+
+#: src/components/confirmation_dialog.tsx:40
+msgid "Cancel"
+msgstr ""
+
+#: src/index.html:20
+msgid "Cockpit Subscriptions"
+msgstr ""
+
+#: src/components/subscription_list.tsx:56
+msgid "De-register"
+msgstr ""
+
+#: src/components/confirmation_dialog.tsx:33
+msgid "Delete"
+msgstr ""
+
+#: src/app.tsx:239
+msgid "Edit Settings"
+msgstr ""
+
+#: src/components/register_code_form.tsx:51
+msgid "Email"
+msgstr ""
+
+#: src/components/subscription_list.tsx:47
+msgid "Expires:"
+msgstr ""
+
+#: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
+msgid "Failed to deactivate product"
+msgstr ""
+
+#: src/app.tsx:121
+msgid "Failed to register system"
+msgstr ""
+
+#: src/app.tsx:91
+msgid "Failed to retrieve extensions"
+msgstr ""
+
+#: src/app.tsx:74
+msgid "Failed to retrieve subscriptions"
+msgstr ""
+
+#: src/components/settings_form.tsx:100
+msgid "Language"
+msgstr ""
+
+#: src/components/subscription_list.tsx:28
+msgid "Loading Subscriptions"
+msgstr ""
+
+#: src/components/settings_form.tsx:85
+msgid "Proxy Url"
+msgstr ""
+
+#: src/components/reboot_dialog.tsx:20
+msgid "Reboot"
+msgstr ""
+
+#: src/components/register_code_form.tsx:58
+#: src/components/subscription_list.tsx:63
+msgid "Register"
+msgstr ""
+
+#: src/app.tsx:244
+msgid "Register a new subscription"
+msgstr ""
+
+#: src/app.tsx:251
+msgid "Registered Subscriptions"
+msgstr ""
+
+#: src/components/register_code_form.tsx:46
+msgid "Registration Code"
+msgstr ""
+
+#: src/components/settings_dialog.tsx:20
+msgid "Settings"
+msgstr ""
+
+#: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
+msgid "Subscriptions"
+msgstr ""
+
+#: src/components/subscription_list.tsx:55
+msgid "This action cannot be undone"
+msgstr ""
+
+#: src/components/reboot_dialog.tsx:18
+msgid "This requires a reboot"
+msgstr ""
+
+#: src/components/reboot_dialog.tsx:23
+msgid ""
+"This requires a reboot to take effect. If you don't reboot now, this change "
+"might not be included"
+msgstr ""
+
+#: src/app.tsx:219
+msgid "Viewing or modifying subscriptions requires administrative access."
+msgstr ""
+
+#: src/components/settings_form.tsx:108
+msgid "save"
+msgstr ""
