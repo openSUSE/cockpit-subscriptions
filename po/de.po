@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 08:59+0100\n"
-"PO-Revision-Date: 2025-05-26 14:45+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-05-27 14:59+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/cockpit/"
 "cockpit-subscriptions/de/>\n"
 "Language: de\n"
@@ -29,15 +29,15 @@ msgstr ""
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr ""
+msgstr "Ein Cockpit Modul zum Verwalten von Subskriptionen"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie das System abmelden wollen?"
 
 #: src/app.tsx:259
 msgid "Available Extensions"
-msgstr ""
+msgstr "Verfügbare Erweiterungen"
 
 #: src/components/confirmation_dialog.tsx:40
 msgid "Cancel"
@@ -45,11 +45,11 @@ msgstr "Abbrechen"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr ""
+msgstr "Cockpit Subskriptionen"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
-msgstr ""
+msgstr "Abmelden"
 
 #: src/components/confirmation_dialog.tsx:33
 msgid "Delete"
@@ -57,91 +57,93 @@ msgstr "Löschen"
 
 #: src/app.tsx:239
 msgid "Edit Settings"
-msgstr ""
+msgstr "Einstellungen bearbeiten"
 
 #: src/components/register_code_form.tsx:51
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 #: src/components/subscription_list.tsx:47
 msgid "Expires:"
-msgstr ""
+msgstr "Ablaufdatum:"
 
 #: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
 msgid "Failed to deactivate product"
-msgstr ""
+msgstr "Fehler beim Deaktivieren des Produkts"
 
 #: src/app.tsx:121
 msgid "Failed to register system"
-msgstr ""
+msgstr "Fehler beim Registrieren des Systems"
 
 #: src/app.tsx:91
 msgid "Failed to retrieve extensions"
-msgstr ""
+msgstr "Fehler beim Abruf der Erweiterungen"
 
 #: src/app.tsx:74
 msgid "Failed to retrieve subscriptions"
-msgstr ""
+msgstr "Fehler beim Abruf der Subskriptionen"
 
 #: src/components/settings_form.tsx:100
 msgid "Language"
-msgstr ""
+msgstr "Sprache"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr ""
+msgstr "Lade Subskriptionen"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
-msgstr ""
+msgstr "Proxy-URL"
 
 #: src/components/reboot_dialog.tsx:20
 msgid "Reboot"
-msgstr ""
+msgstr "Neustart"
 
 #: src/components/register_code_form.tsx:58
 #: src/components/subscription_list.tsx:63
 msgid "Register"
-msgstr ""
+msgstr "Registrieren"
 
 #: src/app.tsx:244
 msgid "Register a new subscription"
-msgstr ""
+msgstr "Registrieren einer neuen Subskription"
 
 #: src/app.tsx:251
 msgid "Registered Subscriptions"
-msgstr ""
+msgstr "Registrierte Subskriptionen"
 
 #: src/components/register_code_form.tsx:46
 msgid "Registration Code"
-msgstr ""
+msgstr "Registrierungscode"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
 msgid "Subscriptions"
-msgstr ""
+msgstr "Subskriptionen"
 
 #: src/components/subscription_list.tsx:55
 msgid "This action cannot be undone"
-msgstr ""
+msgstr "Diese Aktion kann nicht rückgängig gemacht werden"
 
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
-msgstr ""
+msgstr "Dies erfordert einen Neustart"
 
 #: src/components/reboot_dialog.tsx:23
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr ""
+"Dies erfordert einen Neustart. Wenn Sie jetzt nicht neu Starten, könnte die "
+"Änderung verloren gehen"
 
 #: src/app.tsx:219
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr ""
+msgstr "Betrachten und Ändern von Subskriptionen erfordert Administratorrechte."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
-msgstr ""
+msgstr "speichern"
