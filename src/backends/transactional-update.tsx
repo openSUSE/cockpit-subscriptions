@@ -103,6 +103,14 @@ export class TransactionalUpdate implements Backend {
             options.push("-p", product);
         }
 
-        return cockpit.spawn(["transactional-update", "--no-selfupdate", "-d", "register", "-d", ...options], { superuser: "require" });
+        return cockpit.spawn(["transactional-update", "--no-selfupdate", "-d", "register", "-d", ...options], { superuser: "require", err: "out" })
+                        .catch(async (output: CockpitSpawnError, data?: string) => {
+                            if (data && data.includes("exit status 70")) {
+                                return cockpit.spawn(["transactional-update", "--no-selfupdate", "-d", "register", "-d"], { superuser: "require" });
+                            }
+
+                            // @ts-expect-error cockpit gives bad typing for this function call
+                            throw new cockpit.ProcessError(output);
+                        });
     }
 }
