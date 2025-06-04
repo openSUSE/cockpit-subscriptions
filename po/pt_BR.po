@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 08:59+0100\n"
-"PO-Revision-Date: 2025-05-26 16:59+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-06-05 00:59+0000\n"
+"Last-Translator: Samanta Magalhaes <samanta_texttrans@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
 "cockpit/cockpit-subscriptions/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -29,15 +29,15 @@ msgstr ""
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr ""
+msgstr "Um módulo do cockpit para gerenciamento de assinaturas"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
-msgstr ""
+msgstr "Deseja realmente cancelar o registro deste sistema?"
 
 #: src/app.tsx:259
 msgid "Available Extensions"
-msgstr ""
+msgstr "Extensões Disponíveis"
 
 #: src/components/confirmation_dialog.tsx:40
 msgid "Cancel"
@@ -45,11 +45,11 @@ msgstr "Cancelar"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr ""
+msgstr "Assinaturas do Cockpit"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
-msgstr ""
+msgstr "Cancelar registro"
 
 #: src/components/confirmation_dialog.tsx:33
 msgid "Delete"
@@ -57,91 +57,93 @@ msgstr "Excluir"
 
 #: src/app.tsx:239
 msgid "Edit Settings"
-msgstr ""
+msgstr "Editar Configurações"
 
 #: src/components/register_code_form.tsx:51
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: src/components/subscription_list.tsx:47
 msgid "Expires:"
-msgstr ""
+msgstr "Expira em:"
 
 #: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
 msgid "Failed to deactivate product"
-msgstr ""
+msgstr "Falha ao desativar produto"
 
 #: src/app.tsx:121
 msgid "Failed to register system"
-msgstr ""
+msgstr "Falha ao registrar sistema"
 
 #: src/app.tsx:91
 msgid "Failed to retrieve extensions"
-msgstr ""
+msgstr "Falha ao recuperar extensões"
 
 #: src/app.tsx:74
 msgid "Failed to retrieve subscriptions"
-msgstr ""
+msgstr "Falha ao recuperar assinaturas"
 
 #: src/components/settings_form.tsx:100
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr ""
+msgstr "Carregando Assinaturas"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
-msgstr ""
+msgstr "URL do Proxy"
 
 #: src/components/reboot_dialog.tsx:20
 msgid "Reboot"
-msgstr ""
+msgstr "Reiniciar"
 
 #: src/components/register_code_form.tsx:58
 #: src/components/subscription_list.tsx:63
 msgid "Register"
-msgstr ""
+msgstr "Registrar"
 
 #: src/app.tsx:244
 msgid "Register a new subscription"
-msgstr ""
+msgstr "Registrar uma nova assinatura"
 
 #: src/app.tsx:251
 msgid "Registered Subscriptions"
-msgstr ""
+msgstr "Assinaturas Registradas"
 
 #: src/components/register_code_form.tsx:46
 msgid "Registration Code"
-msgstr ""
+msgstr "Código de Registro"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
 msgid "Subscriptions"
-msgstr ""
+msgstr "Assinaturas"
 
 #: src/components/subscription_list.tsx:55
 msgid "This action cannot be undone"
-msgstr ""
+msgstr "Não é possível desfazer esta ação"
 
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
-msgstr ""
+msgstr "É necessário reinicializar"
 
 #: src/components/reboot_dialog.tsx:23
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr ""
+"É necessário reinicializar para entrar em vigor. Se você não reinicializar "
+"agora, a alteração pode não ser incluída"
 
 #: src/app.tsx:219
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr ""
+msgstr "É necessário o acesso administrativo para ver ou modificar assinaturas."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
-msgstr ""
+msgstr "salvar"
