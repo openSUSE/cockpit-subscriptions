@@ -153,6 +153,8 @@ export const Application = () => {
                                                     }]);
                                                 });
                             } else {
+                                setLoadingSubscriptions(false);
+                                updateSubscriptions();
                                 setErrors([...errors, {
                                     type: "danger",
                                     text: _("Failed to deactivate product"),
