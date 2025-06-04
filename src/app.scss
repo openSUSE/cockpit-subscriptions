@@ -4,3 +4,7 @@
 p {
     font-weight: bold;
 }
+
+.pf-v6-c-page__main-body > .pf-v6-c-card:not(:first-child) {
+  margin-top: 30px;
+}
