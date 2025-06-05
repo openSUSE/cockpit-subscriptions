@@ -15,131 +15,133 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 08:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-06-05 04:59+0000\n"
+"Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/cockpit/"
+"cockpit-subscriptions/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Cockpit manifest2po\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr ""
+msgstr "用於管理訂閱的 Cockpit 模組"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
-msgstr ""
+msgstr "您確定要取消註冊此系統嗎？"
 
 #: src/app.tsx:259
 msgid "Available Extensions"
-msgstr ""
+msgstr "可用延伸"
 
 #: src/components/confirmation_dialog.tsx:40
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr ""
+msgstr "Cockpit 訂閱"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
-msgstr ""
+msgstr "取消註冊"
 
 #: src/components/confirmation_dialog.tsx:33
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: src/app.tsx:239
 msgid "Edit Settings"
-msgstr ""
+msgstr "編輯設定"
 
 #: src/components/register_code_form.tsx:51
 msgid "Email"
-msgstr ""
+msgstr "電子郵件"
 
 #: src/components/subscription_list.tsx:47
 msgid "Expires:"
-msgstr ""
+msgstr "過期时间："
 
 #: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
 msgid "Failed to deactivate product"
-msgstr ""
+msgstr "無法停用產品"
 
 #: src/app.tsx:121
 msgid "Failed to register system"
-msgstr ""
+msgstr "無法註冊系統"
 
 #: src/app.tsx:91
 msgid "Failed to retrieve extensions"
-msgstr ""
+msgstr "無法擷取延伸"
 
 #: src/app.tsx:74
 msgid "Failed to retrieve subscriptions"
-msgstr ""
+msgstr "無法擷取訂閱"
 
 #: src/components/settings_form.tsx:100
 msgid "Language"
-msgstr ""
+msgstr "語言"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr ""
+msgstr "正在載入訂閱"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
-msgstr ""
+msgstr "代理 URL"
 
 #: src/components/reboot_dialog.tsx:20
 msgid "Reboot"
-msgstr ""
+msgstr "重新開機"
 
 #: src/components/register_code_form.tsx:58
 #: src/components/subscription_list.tsx:63
 msgid "Register"
-msgstr ""
+msgstr "註冊"
 
 #: src/app.tsx:244
 msgid "Register a new subscription"
-msgstr ""
+msgstr "註冊新訂閱"
 
 #: src/app.tsx:251
 msgid "Registered Subscriptions"
-msgstr ""
+msgstr "註冊的訂閱"
 
 #: src/components/register_code_form.tsx:46
 msgid "Registration Code"
-msgstr ""
+msgstr "註冊代碼"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
 msgid "Subscriptions"
-msgstr ""
+msgstr "訂閱"
 
 #: src/components/subscription_list.tsx:55
 msgid "This action cannot be undone"
-msgstr ""
+msgstr "無法完成此動作"
 
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
-msgstr ""
+msgstr "此操作需要重新開機"
 
 #: src/components/reboot_dialog.tsx:23
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
-msgstr ""
+msgstr "此操作需要立即重新開機。若不如此，此變更可能不會生效"
 
 #: src/app.tsx:219
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr ""
+msgstr "檢視或修改訂閱需要擁有管理存取權。"
 
 #: src/components/settings_form.tsx:108
 msgid "save"
-msgstr ""
+msgstr "儲存"
