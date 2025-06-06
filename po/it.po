@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 08:59+0100\n"
-"PO-Revision-Date: 2025-05-26 16:59+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-06-06 09:59+0000\n"
+"Last-Translator: Davide Aiello <davide.aiello@novilingulists.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/cockpit/"
 "cockpit-subscriptions/it/>\n"
 "Language: it\n"
@@ -29,15 +29,15 @@ msgstr ""
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr ""
+msgstr "Un modulo del cockpit per gestire le sottoscrizioni"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
-msgstr ""
+msgstr "Annullare la registrazione di questo sistema?"
 
 #: src/app.tsx:259
 msgid "Available Extensions"
-msgstr ""
+msgstr "Estesioni disponibili"
 
 #: src/components/confirmation_dialog.tsx:40
 msgid "Cancel"
@@ -45,11 +45,11 @@ msgstr "Annulla"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr ""
+msgstr "Sottoscrizioni al cockpit"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
-msgstr ""
+msgstr "Annulla registrazione"
 
 #: src/components/confirmation_dialog.tsx:33
 msgid "Delete"
@@ -57,91 +57,95 @@ msgstr "Cancella"
 
 #: src/app.tsx:239
 msgid "Edit Settings"
-msgstr ""
+msgstr "Modifica impostazioni"
 
 #: src/components/register_code_form.tsx:51
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: src/components/subscription_list.tsx:47
 msgid "Expires:"
-msgstr ""
+msgstr "Scadenza:"
 
 #: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
 msgid "Failed to deactivate product"
-msgstr ""
+msgstr "Impossibile disattivare il prodotto"
 
 #: src/app.tsx:121
 msgid "Failed to register system"
-msgstr ""
+msgstr "Impossibile registrare il sistema"
 
 #: src/app.tsx:91
 msgid "Failed to retrieve extensions"
-msgstr ""
+msgstr "Impossibile recuperare le estensioni"
 
 #: src/app.tsx:74
 msgid "Failed to retrieve subscriptions"
-msgstr ""
+msgstr "Impossibile recuperare le sottoscrizioni"
 
 #: src/components/settings_form.tsx:100
 msgid "Language"
-msgstr ""
+msgstr "Lingua"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr ""
+msgstr "Caricamento sottoscrizioni"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
-msgstr ""
+msgstr "Url del proxy"
 
 #: src/components/reboot_dialog.tsx:20
 msgid "Reboot"
-msgstr ""
+msgstr "Riavvia"
 
 #: src/components/register_code_form.tsx:58
 #: src/components/subscription_list.tsx:63
 msgid "Register"
-msgstr ""
+msgstr "Registra"
 
 #: src/app.tsx:244
 msgid "Register a new subscription"
-msgstr ""
+msgstr "Registra una nuova sottoscrizione"
 
 #: src/app.tsx:251
 msgid "Registered Subscriptions"
-msgstr ""
+msgstr "Sottoscrizioni registrate"
 
 #: src/components/register_code_form.tsx:46
 msgid "Registration Code"
-msgstr ""
+msgstr "Codice di registrazione"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
-msgstr ""
+msgstr "Impostazioni"
 
 #: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
 msgid "Subscriptions"
-msgstr ""
+msgstr "Sottoscrizioni"
 
 #: src/components/subscription_list.tsx:55
 msgid "This action cannot be undone"
-msgstr ""
+msgstr "Questa azione non può essere annullata"
 
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
-msgstr ""
+msgstr "È necessario un riavvio"
 
 #: src/components/reboot_dialog.tsx:23
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr ""
+"È necessario un riavvio per applicare la modifica. Se non si esegue il "
+"riavvio, la modifica non sarà inclusa"
 
 #: src/app.tsx:219
 msgid "Viewing or modifying subscriptions requires administrative access."
 msgstr ""
+"La visualizzazione o la modifica delle sottoscrizioni richiede un accesso da "
+"amministratore."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
-msgstr ""
+msgstr "salva"
