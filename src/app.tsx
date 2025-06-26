@@ -97,6 +97,13 @@ export const Application = () => {
     }, [backend, setLoadingSubscriptions, setSubscriptions, setUnregisteredSubscriptions, setLoadingExtensions, errors]);
 
     useEffect(() => {
+        if (isSuperuser) {
+            setErrors([]);
+            updateSubscriptions();
+        }
+    }, [isSuperuser]);
+
+    useEffect(() => {
         if (!loadedSubscriptions && backend !== null) {
             setLoadedSubscriptions(true);
             updateSubscriptions();
