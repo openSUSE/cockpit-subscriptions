@@ -25,7 +25,7 @@ const SettingsForm = ({ formData, setFormData }: Props) => {
     };
 
     const setFormFields = useCallback(() => {
-        cockpit.file(suseconnect_path, { superuser: "required" }).read()
+        cockpit.file(suseconnect_path, { superuser: "require" }).read()
                         .then(content => {
                             if (content) {
                                 const newFormData = { ...formData };
@@ -65,7 +65,7 @@ const SettingsForm = ({ formData, setFormData }: Props) => {
         if (formData.insecure)
             contentLines.push("insecure: " + formData.insecure);
 
-        cockpit.file(suseconnect_path, { superuser: "required" })
+        cockpit.file(suseconnect_path, { superuser: "require" })
                         .replace(contentLines.join("\n") + "\n")
                         .then((result: string) => {
                             if (result[0]) {
