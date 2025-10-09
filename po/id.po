@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 08:59+0100\n"
-"PO-Revision-Date: 2025-10-09 16:24+0000\n"
+"PO-Revision-Date: 2025-10-09 18:59+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/cockpit/"
 "cockpit-subscriptions/id/>\n"
@@ -29,15 +29,15 @@ msgstr ""
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr ""
+msgstr "Modul cockpit untuk mengelola langganan"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
-msgstr ""
+msgstr "Apakah Anda yakin ingin menghapus pendaftaran sistem ini?"
 
 #: src/app.tsx:259
 msgid "Available Extensions"
-msgstr ""
+msgstr "Ekstensi yang Tersedia"
 
 #: src/components/confirmation_dialog.tsx:40
 msgid "Cancel"
@@ -45,103 +45,105 @@ msgstr "Batalkan"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr ""
+msgstr "Langganan Cockpit"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
-msgstr ""
+msgstr "Batalkan pendaftaran"
 
 #: src/components/confirmation_dialog.tsx:33
 msgid "Delete"
-msgstr ""
+msgstr "Hapus"
 
 #: src/app.tsx:239
 msgid "Edit Settings"
-msgstr ""
+msgstr "Edit Pengaturan"
 
 #: src/components/register_code_form.tsx:51
 msgid "Email"
-msgstr ""
+msgstr "Surel"
 
 #: src/components/subscription_list.tsx:47
 msgid "Expires:"
-msgstr ""
+msgstr "Berlaku hingga:"
 
 #: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
 msgid "Failed to deactivate product"
-msgstr ""
+msgstr "Gagal menonaktifkan produk"
 
 #: src/app.tsx:121
 msgid "Failed to register system"
-msgstr ""
+msgstr "Gagal mendaftarkan sistem"
 
 #: src/app.tsx:91
 msgid "Failed to retrieve extensions"
-msgstr ""
+msgstr "Gagal mengambil ekstensi"
 
 #: src/app.tsx:74
 msgid "Failed to retrieve subscriptions"
-msgstr ""
+msgstr "Gagal mengambil langganan"
 
 #: src/components/settings_form.tsx:100
 msgid "Language"
-msgstr ""
+msgstr "Bahasa"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr ""
+msgstr "Memuat Langganan"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
-msgstr ""
+msgstr "URL Proxy"
 
 #: src/components/reboot_dialog.tsx:20
 msgid "Reboot"
-msgstr ""
+msgstr "Mulai ulang"
 
 #: src/components/register_code_form.tsx:58
 #: src/components/subscription_list.tsx:63
 msgid "Register"
-msgstr ""
+msgstr "Daftar"
 
 #: src/app.tsx:244
 msgid "Register a new subscription"
-msgstr ""
+msgstr "Daftarkan langganan baru"
 
 #: src/app.tsx:251
 msgid "Registered Subscriptions"
-msgstr ""
+msgstr "Langganan Terdaftar"
 
 #: src/components/register_code_form.tsx:46
 msgid "Registration Code"
-msgstr ""
+msgstr "Kode Pendaftaran"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
-msgstr ""
+msgstr "Pengaturan"
 
 #: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
 msgid "Subscriptions"
-msgstr ""
+msgstr "Langganan"
 
 #: src/components/subscription_list.tsx:55
 msgid "This action cannot be undone"
-msgstr ""
+msgstr "Tindakan ini tidak dapat dibatalkan"
 
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
-msgstr ""
+msgstr "Hal ini memerlukan proses memulai ulang"
 
 #: src/components/reboot_dialog.tsx:23
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr ""
+"Perubahan ini memerlukan proses memulai ulang agar berlaku. Jika Anda tidak "
+"melakukan memulai ulang sekarang, perubahan ini mungkin tidak akan diterapkan"
 
 #: src/app.tsx:219
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr ""
+msgstr "Melihat atau mengubah langganan memerlukan akses administratif."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
-msgstr ""
+msgstr "simpan"
