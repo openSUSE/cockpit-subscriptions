@@ -49,7 +49,7 @@ interface Backend {
 
     getExtensions(): Promise<Extension[]>;
 
-    register(reg_code?: string, email?: string, product?: string): Promise<[boolean, string]>;
+    register(reg_code?: string, email?: string, product?: string, url?: string): Promise<[boolean, string]>;
 
     deregister(product?: string): Promise<string>;
 }

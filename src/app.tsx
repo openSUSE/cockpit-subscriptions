@@ -37,6 +37,8 @@ export const Application = () => {
     const [formData, setFormData] = useState<RegisterFormData>({
         registrationCode: "",
         email: "",
+        registrationServerUrl: "",
+        registrationServer: "scc",
     });
     const [errors, setErrors] = useState<Notification[]>([]);
     const [loadedSubscriptions, setLoadedSubscriptions] = useState<boolean>(false);
@@ -112,7 +114,7 @@ export const Application = () => {
 
     const registerProduct = useCallback(async (): Promise<[boolean, string]> => {
         console.debug("registering", formData);
-        const result = await backend?.register(formData.registrationCode, formData.email, "").then((result) => {
+        const result = await backend?.register(formData.registrationCode, formData.email, "", formData.registrationServerUrl).then((result) => {
             if (result[0]) {
                 if (result[1].includes("Please reboot your machine")) {
                     // Show reboot modal

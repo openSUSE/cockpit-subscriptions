@@ -1,13 +1,16 @@
 import cockpit from 'cockpit';
-import { Form, Grid, FormGroup, TextInput, GridItem, ActionGroup, Button } from "@patternfly/react-core";
+import { Form, Grid, FormGroup, TextInput, GridItem, ActionGroup, Button, Stack, StackItem, Flex, FlexItem } from "@patternfly/react-core";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { EmptyStatePanel } from 'cockpit-components-empty-state';
+import { SimpleSelect } from "cockpit-components-simple-select";
 
 const _ = cockpit.gettext;
 
 type RegisterFormData = {
     registrationCode: string,
     email: string,
+    registrationServerUrl: string,
+    registrationServer: "scc" | "custom",
 };
 
 type Props = {
@@ -19,7 +22,7 @@ type Props = {
 const RegisterCodeForm = ({ submitCallback, formData, setFormData }: Props) => {
     const [submitting, setSubmitting] = useState<boolean>(false);
 
-    const onValueChange = (fieldName: string, value: string|number) => {
+    const onValueChange = (fieldName: string, value: string | number) => {
         setFormData({ ...formData, [fieldName]: value });
     };
 
@@ -30,6 +33,8 @@ const RegisterCodeForm = ({ submitCallback, formData, setFormData }: Props) => {
                 setFormData({
                     registrationCode: "",
                     email: "",
+                    registrationServer: "scc",
+                    registrationServerUrl: "",
                 });
             }
 
@@ -42,6 +47,32 @@ const RegisterCodeForm = ({ submitCallback, formData, setFormData }: Props) => {
 
     return (
         <Form>
+            <Stack>
+                <StackItem>
+                    <Flex>
+                        <FlexItem>
+                            <FormGroup label={_("Registration Server")} fieldId="registration-server">
+                                <SimpleSelect
+                                    options={[
+                                        { value: "scc", content: _("SUSE Customer Center (SCC)") },
+                                        { value: "custom", content: _("Custom") }
+                                    ]}
+                                    selected={formData.registrationServer}
+                                    onSelect={(value) => onValueChange("registrationServer", value)}
+                                />
+                            </FormGroup>
+                        </FlexItem>
+                        {formData.registrationServer === "custom" &&
+                            <FlexItem>
+                                <FormGroup label={_("Server URL")} fieldId="server-url">
+                                    <TextInput
+                                        onChange={(_, value) => onValueChange("registrationServerUrl", value)} value={formData.registrationServerUrl}
+                                    />
+                                </FormGroup>
+                            </FlexItem>}
+                    </Flex>
+                </StackItem>
+            </Stack>
             <Grid hasGutter md={4}>
                 <FormGroup label={_("Registration Code")} fieldId="registration-code">
                     <TextInput

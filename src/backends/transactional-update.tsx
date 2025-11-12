@@ -74,7 +74,7 @@ export class TransactionalUpdate implements Backend {
         return cockpit.spawn(["suseconnect", "--json", "-l"], { superuser: "require" });
     }
 
-    async register(reg_code: string, email: string, product: string): Promise<[boolean, string]> {
+    async register(reg_code: string, email: string, product: string, url: string): Promise<[boolean, string]> {
         console.debug("attempting to register system");
         const options = [];
         if (reg_code !== "") {
@@ -85,6 +85,9 @@ export class TransactionalUpdate implements Backend {
         }
         if (product !== "") {
             options.push("-p", product);
+        }
+        if (url !== "") {
+            options.push("--url", url, "--write-config");
         }
         return cockpit.spawn(["transactional-update", "--no-selfupdate", "-n", "-d", "register", ...options], { superuser: "require" })
                         .then((result): [boolean, string] => {
