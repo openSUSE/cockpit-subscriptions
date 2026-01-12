@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 08:59+0100\n"
+"POT-Creation-Date: 2026-01-12 12:00+0000\n"
 "PO-Revision-Date: 2025-05-27 14:59+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
-"Language-Team: German <https://l10n.opensuse.org/projects/cockpit/"
-"cockpit-subscriptions/de/>\n"
+"Language-Team: German <https://l10n.opensuse.org/projects/cockpit/cockpit-"
+"subscriptions/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,11 +35,11 @@ msgstr "Ein Cockpit Modul zum Verwalten von Subskriptionen"
 msgid "Are you sure you want to de-register this system?"
 msgstr "Sind Sie sicher, dass Sie das System abmelden wollen?"
 
-#: src/app.tsx:259
+#: src/app.tsx:271
 msgid "Available Extensions"
 msgstr "Verfügbare Erweiterungen"
 
-#: src/components/confirmation_dialog.tsx:40
+#: src/components/confirmation_dialog.tsx:43
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -47,19 +47,23 @@ msgstr "Abbrechen"
 msgid "Cockpit Subscriptions"
 msgstr "Cockpit Subskriptionen"
 
+#: src/components/register_code_form.tsx:58
+msgid "Custom"
+msgstr ""
+
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
 msgstr "Abmelden"
 
-#: src/components/confirmation_dialog.tsx:33
+#: src/components/confirmation_dialog.tsx:36
 msgid "Delete"
 msgstr "Löschen"
 
-#: src/app.tsx:239
+#: src/app.tsx:251
 msgid "Edit Settings"
 msgstr "Einstellungen bearbeiten"
 
-#: src/components/register_code_form.tsx:51
+#: src/components/register_code_form.tsx:82
 msgid "Email"
 msgstr "E-Mail"
 
@@ -67,19 +71,19 @@ msgstr "E-Mail"
 msgid "Expires:"
 msgstr "Ablaufdatum:"
 
-#: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
+#: src/app.tsx:160 src/app.tsx:169 src/app.tsx:194
 msgid "Failed to deactivate product"
 msgstr "Fehler beim Deaktivieren des Produkts"
 
-#: src/app.tsx:121
+#: src/app.tsx:131
 msgid "Failed to register system"
 msgstr "Fehler beim Registrieren des Systems"
 
-#: src/app.tsx:91
+#: src/app.tsx:94
 msgid "Failed to retrieve extensions"
 msgstr "Fehler beim Abruf der Erweiterungen"
 
-#: src/app.tsx:74
+#: src/app.tsx:77
 msgid "Failed to retrieve subscriptions"
 msgstr "Fehler beim Abruf der Subskriptionen"
 
@@ -95,26 +99,40 @@ msgstr "Lade Subskriptionen"
 msgid "Proxy Url"
 msgstr "Proxy-URL"
 
-#: src/components/reboot_dialog.tsx:20
+#: src/components/reboot_dialog.tsx:24
 msgid "Reboot"
 msgstr "Neustart"
 
-#: src/components/register_code_form.tsx:58
+#: src/components/register_code_form.tsx:89
 #: src/components/subscription_list.tsx:63
 msgid "Register"
 msgstr "Registrieren"
 
-#: src/app.tsx:244
+#: src/app.tsx:256
 msgid "Register a new subscription"
 msgstr "Registrieren einer neuen Subskription"
 
-#: src/app.tsx:251
+#: src/app.tsx:263
 msgid "Registered Subscriptions"
 msgstr "Registrierte Subskriptionen"
 
-#: src/components/register_code_form.tsx:46
+#: src/components/register_code_form.tsx:77
 msgid "Registration Code"
 msgstr "Registrierungscode"
+
+#: src/components/register_code_form.tsx:54
+#, fuzzy
+#| msgid "Registration Code"
+msgid "Registration Server"
+msgstr "Registrierungscode"
+
+#: src/components/register_code_form.tsx:57
+msgid "SUSE Customer Center (SCC)"
+msgstr ""
+
+#: src/components/register_code_form.tsx:67
+msgid "Server URL"
+msgstr ""
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
@@ -132,7 +150,7 @@ msgstr "Diese Aktion kann nicht rückgängig gemacht werden"
 msgid "This requires a reboot"
 msgstr "Dies erfordert einen Neustart"
 
-#: src/components/reboot_dialog.tsx:23
+#: src/components/reboot_dialog.tsx:21
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
@@ -140,9 +158,10 @@ msgstr ""
 "Dies erfordert einen Neustart. Wenn Sie jetzt nicht neu Starten, könnte die "
 "Änderung verloren gehen"
 
-#: src/app.tsx:219
+#: src/app.tsx:231
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr "Betrachten und Ändern von Subskriptionen erfordert Administratorrechte."
+msgstr ""
+"Betrachten und Ändern von Subskriptionen erfordert Administratorrechte."
 
 #: src/components/settings_form.tsx:108
 msgid "save"

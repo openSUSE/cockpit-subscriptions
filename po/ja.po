@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 08:59+0100\n"
+"POT-Creation-Date: 2026-01-12 12:00+0000\n"
 "PO-Revision-Date: 2025-06-05 04:59+0000\n"
 "Last-Translator: Carina Hagl <vistatec_pm@sunflare.co.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/cockpit/"
-"cockpit-subscriptions/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/cockpit/cockpit-"
+"subscriptions/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,11 +35,11 @@ msgstr "購読を管理するためのCockpitモジュール"
 msgid "Are you sure you want to de-register this system?"
 msgstr "このシステムの登録を解除してもよろしいですか?"
 
-#: src/app.tsx:259
+#: src/app.tsx:271
 msgid "Available Extensions"
 msgstr "利用可能な拡張機能"
 
-#: src/components/confirmation_dialog.tsx:40
+#: src/components/confirmation_dialog.tsx:43
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -47,19 +47,23 @@ msgstr "キャンセル"
 msgid "Cockpit Subscriptions"
 msgstr "Cockpit購読"
 
+#: src/components/register_code_form.tsx:58
+msgid "Custom"
+msgstr ""
+
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
 msgstr "登録解除"
 
-#: src/components/confirmation_dialog.tsx:33
+#: src/components/confirmation_dialog.tsx:36
 msgid "Delete"
 msgstr "削除"
 
-#: src/app.tsx:239
+#: src/app.tsx:251
 msgid "Edit Settings"
 msgstr "設定の編集"
 
-#: src/components/register_code_form.tsx:51
+#: src/components/register_code_form.tsx:82
 msgid "Email"
 msgstr "電子メール"
 
@@ -67,19 +71,19 @@ msgstr "電子メール"
 msgid "Expires:"
 msgstr "期限切れ日時:"
 
-#: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
+#: src/app.tsx:160 src/app.tsx:169 src/app.tsx:194
 msgid "Failed to deactivate product"
 msgstr "製品の無効化に失敗しました"
 
-#: src/app.tsx:121
+#: src/app.tsx:131
 msgid "Failed to register system"
 msgstr "システムの登録に失敗しました"
 
-#: src/app.tsx:91
+#: src/app.tsx:94
 msgid "Failed to retrieve extensions"
 msgstr "拡張機能の取得に失敗しました"
 
-#: src/app.tsx:74
+#: src/app.tsx:77
 msgid "Failed to retrieve subscriptions"
 msgstr "購読の取得に失敗しました"
 
@@ -95,26 +99,40 @@ msgstr "購読を読み込んでいます"
 msgid "Proxy Url"
 msgstr "プロキシURL"
 
-#: src/components/reboot_dialog.tsx:20
+#: src/components/reboot_dialog.tsx:24
 msgid "Reboot"
 msgstr "再起動"
 
-#: src/components/register_code_form.tsx:58
+#: src/components/register_code_form.tsx:89
 #: src/components/subscription_list.tsx:63
 msgid "Register"
 msgstr "登録"
 
-#: src/app.tsx:244
+#: src/app.tsx:256
 msgid "Register a new subscription"
 msgstr "新しい購読の登録"
 
-#: src/app.tsx:251
+#: src/app.tsx:263
 msgid "Registered Subscriptions"
 msgstr "登録された購読"
 
-#: src/components/register_code_form.tsx:46
+#: src/components/register_code_form.tsx:77
 msgid "Registration Code"
 msgstr "登録コード"
+
+#: src/components/register_code_form.tsx:54
+#, fuzzy
+#| msgid "Registration Code"
+msgid "Registration Server"
+msgstr "登録コード"
+
+#: src/components/register_code_form.tsx:57
+msgid "SUSE Customer Center (SCC)"
+msgstr ""
+
+#: src/components/register_code_form.tsx:67
+msgid "Server URL"
+msgstr ""
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
@@ -132,14 +150,15 @@ msgstr "このアクションを取り消すことはできません"
 msgid "This requires a reboot"
 msgstr "これには再起動が必要です"
 
-#: src/components/reboot_dialog.tsx:23
+#: src/components/reboot_dialog.tsx:21
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
-msgstr "これを有効にするには再起動が必要です。今すぐ再起動しないと、この変更が反映さ"
+msgstr ""
+"これを有効にするには再起動が必要です。今すぐ再起動しないと、この変更が反映さ"
 "れない可能性があります"
 
-#: src/app.tsx:219
+#: src/app.tsx:231
 msgid "Viewing or modifying subscriptions requires administrative access."
 msgstr "購読を表示または変更するには、管理者アクセスが必要です。"
 

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 08:59+0100\n"
+"POT-Creation-Date: 2026-01-12 12:00+0000\n"
 "PO-Revision-Date: 2025-06-05 04:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/cockpit/"
@@ -35,11 +35,11 @@ msgstr "用於管理訂閱的 Cockpit 模組"
 msgid "Are you sure you want to de-register this system?"
 msgstr "您確定要取消註冊此系統嗎？"
 
-#: src/app.tsx:259
+#: src/app.tsx:271
 msgid "Available Extensions"
 msgstr "可用延伸"
 
-#: src/components/confirmation_dialog.tsx:40
+#: src/components/confirmation_dialog.tsx:43
 msgid "Cancel"
 msgstr "取消"
 
@@ -47,19 +47,23 @@ msgstr "取消"
 msgid "Cockpit Subscriptions"
 msgstr "Cockpit 訂閱"
 
+#: src/components/register_code_form.tsx:58
+msgid "Custom"
+msgstr ""
+
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
 msgstr "取消註冊"
 
-#: src/components/confirmation_dialog.tsx:33
+#: src/components/confirmation_dialog.tsx:36
 msgid "Delete"
 msgstr "刪除"
 
-#: src/app.tsx:239
+#: src/app.tsx:251
 msgid "Edit Settings"
 msgstr "編輯設定"
 
-#: src/components/register_code_form.tsx:51
+#: src/components/register_code_form.tsx:82
 msgid "Email"
 msgstr "電子郵件"
 
@@ -67,19 +71,19 @@ msgstr "電子郵件"
 msgid "Expires:"
 msgstr "過期时间："
 
-#: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
+#: src/app.tsx:160 src/app.tsx:169 src/app.tsx:194
 msgid "Failed to deactivate product"
 msgstr "無法停用產品"
 
-#: src/app.tsx:121
+#: src/app.tsx:131
 msgid "Failed to register system"
 msgstr "無法註冊系統"
 
-#: src/app.tsx:91
+#: src/app.tsx:94
 msgid "Failed to retrieve extensions"
 msgstr "無法擷取延伸"
 
-#: src/app.tsx:74
+#: src/app.tsx:77
 msgid "Failed to retrieve subscriptions"
 msgstr "無法擷取訂閱"
 
@@ -95,26 +99,40 @@ msgstr "正在載入訂閱"
 msgid "Proxy Url"
 msgstr "代理 URL"
 
-#: src/components/reboot_dialog.tsx:20
+#: src/components/reboot_dialog.tsx:24
 msgid "Reboot"
 msgstr "重新開機"
 
-#: src/components/register_code_form.tsx:58
+#: src/components/register_code_form.tsx:89
 #: src/components/subscription_list.tsx:63
 msgid "Register"
 msgstr "註冊"
 
-#: src/app.tsx:244
+#: src/app.tsx:256
 msgid "Register a new subscription"
 msgstr "註冊新訂閱"
 
-#: src/app.tsx:251
+#: src/app.tsx:263
 msgid "Registered Subscriptions"
 msgstr "註冊的訂閱"
 
-#: src/components/register_code_form.tsx:46
+#: src/components/register_code_form.tsx:77
 msgid "Registration Code"
 msgstr "註冊代碼"
+
+#: src/components/register_code_form.tsx:54
+#, fuzzy
+#| msgid "Registration Code"
+msgid "Registration Server"
+msgstr "註冊代碼"
+
+#: src/components/register_code_form.tsx:57
+msgid "SUSE Customer Center (SCC)"
+msgstr ""
+
+#: src/components/register_code_form.tsx:67
+msgid "Server URL"
+msgstr ""
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
@@ -132,13 +150,13 @@ msgstr "無法完成此動作"
 msgid "This requires a reboot"
 msgstr "此操作需要重新開機"
 
-#: src/components/reboot_dialog.tsx:23
+#: src/components/reboot_dialog.tsx:21
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr "此操作需要立即重新開機。若不如此，此變更可能不會生效"
 
-#: src/app.tsx:219
+#: src/app.tsx:231
 msgid "Viewing or modifying subscriptions requires administrative access."
 msgstr "檢視或修改訂閱需要擁有管理存取權。"
 

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 08:59+0100\n"
+"POT-Creation-Date: 2026-01-12 12:00+0000\n"
 "PO-Revision-Date: 2025-06-05 00:59+0000\n"
 "Last-Translator: Samanta Magalhaes <samanta_texttrans@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
@@ -35,11 +35,11 @@ msgstr "Um módulo do cockpit para gerenciamento de assinaturas"
 msgid "Are you sure you want to de-register this system?"
 msgstr "Deseja realmente cancelar o registro deste sistema?"
 
-#: src/app.tsx:259
+#: src/app.tsx:271
 msgid "Available Extensions"
 msgstr "Extensões Disponíveis"
 
-#: src/components/confirmation_dialog.tsx:40
+#: src/components/confirmation_dialog.tsx:43
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -47,19 +47,23 @@ msgstr "Cancelar"
 msgid "Cockpit Subscriptions"
 msgstr "Assinaturas do Cockpit"
 
+#: src/components/register_code_form.tsx:58
+msgid "Custom"
+msgstr ""
+
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
 msgstr "Cancelar registro"
 
-#: src/components/confirmation_dialog.tsx:33
+#: src/components/confirmation_dialog.tsx:36
 msgid "Delete"
 msgstr "Excluir"
 
-#: src/app.tsx:239
+#: src/app.tsx:251
 msgid "Edit Settings"
 msgstr "Editar Configurações"
 
-#: src/components/register_code_form.tsx:51
+#: src/components/register_code_form.tsx:82
 msgid "Email"
 msgstr "E-mail"
 
@@ -67,19 +71,19 @@ msgstr "E-mail"
 msgid "Expires:"
 msgstr "Expira em:"
 
-#: src/app.tsx:150 src/app.tsx:157 src/app.tsx:182
+#: src/app.tsx:160 src/app.tsx:169 src/app.tsx:194
 msgid "Failed to deactivate product"
 msgstr "Falha ao desativar produto"
 
-#: src/app.tsx:121
+#: src/app.tsx:131
 msgid "Failed to register system"
 msgstr "Falha ao registrar sistema"
 
-#: src/app.tsx:91
+#: src/app.tsx:94
 msgid "Failed to retrieve extensions"
 msgstr "Falha ao recuperar extensões"
 
-#: src/app.tsx:74
+#: src/app.tsx:77
 msgid "Failed to retrieve subscriptions"
 msgstr "Falha ao recuperar assinaturas"
 
@@ -95,26 +99,40 @@ msgstr "Carregando Assinaturas"
 msgid "Proxy Url"
 msgstr "URL do Proxy"
 
-#: src/components/reboot_dialog.tsx:20
+#: src/components/reboot_dialog.tsx:24
 msgid "Reboot"
 msgstr "Reiniciar"
 
-#: src/components/register_code_form.tsx:58
+#: src/components/register_code_form.tsx:89
 #: src/components/subscription_list.tsx:63
 msgid "Register"
 msgstr "Registrar"
 
-#: src/app.tsx:244
+#: src/app.tsx:256
 msgid "Register a new subscription"
 msgstr "Registrar uma nova assinatura"
 
-#: src/app.tsx:251
+#: src/app.tsx:263
 msgid "Registered Subscriptions"
 msgstr "Assinaturas Registradas"
 
-#: src/components/register_code_form.tsx:46
+#: src/components/register_code_form.tsx:77
 msgid "Registration Code"
 msgstr "Código de Registro"
+
+#: src/components/register_code_form.tsx:54
+#, fuzzy
+#| msgid "Registration Code"
+msgid "Registration Server"
+msgstr "Código de Registro"
+
+#: src/components/register_code_form.tsx:57
+msgid "SUSE Customer Center (SCC)"
+msgstr ""
+
+#: src/components/register_code_form.tsx:67
+msgid "Server URL"
+msgstr ""
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
@@ -132,7 +150,7 @@ msgstr "Não é possível desfazer esta ação"
 msgid "This requires a reboot"
 msgstr "É necessário reinicializar"
 
-#: src/components/reboot_dialog.tsx:23
+#: src/components/reboot_dialog.tsx:21
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
@@ -140,9 +158,10 @@ msgstr ""
 "É necessário reinicializar para entrar em vigor. Se você não reinicializar "
 "agora, a alteração pode não ser incluída"
 
-#: src/app.tsx:219
+#: src/app.tsx:231
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr "É necessário o acesso administrativo para ver ou modificar assinaturas."
+msgstr ""
+"É necessário o acesso administrativo para ver ou modificar assinaturas."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
