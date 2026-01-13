@@ -22,7 +22,7 @@ msgstr ""
 "#-#-#-#-#  cockpit-subscriptions.js.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-12 12:00+0000\n"
+"POT-Creation-Date: 2026-01-13 11:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,7 +93,11 @@ msgstr ""
 msgid "Expires:"
 msgstr ""
 
-#: src/app.tsx:160 src/app.tsx:169 src/app.tsx:194
+#: src/app.tsx:194
+msgid "Failed to activate product"
+msgstr ""
+
+#: src/app.tsx:160 src/app.tsx:169
 msgid "Failed to deactivate product"
 msgstr ""
 

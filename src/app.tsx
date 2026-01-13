@@ -191,7 +191,7 @@ export const Application = () => {
                         .catch((output) => {
                             setErrors([...errors, {
                                 type: "danger",
-                                text: _("Failed to deactivate product"),
+                                text: _("Failed to activate product"),
                                 detail: output.toString(),
                             }]);
                         });
