@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-12 12:00+0000\n"
+"POT-Creation-Date: 2026-01-13 11:34+0000\n"
 "PO-Revision-Date: 2025-06-05 04:59+0000\n"
 "Last-Translator: Carina Hagl <vistatec_pm@sunflare.co.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/cockpit/cockpit-"
@@ -71,7 +71,13 @@ msgstr "電子メール"
 msgid "Expires:"
 msgstr "期限切れ日時:"
 
-#: src/app.tsx:160 src/app.tsx:169 src/app.tsx:194
+#: src/app.tsx:194
+#, fuzzy
+#| msgid "Failed to deactivate product"
+msgid "Failed to activate product"
+msgstr "製品の無効化に失敗しました"
+
+#: src/app.tsx:160 src/app.tsx:169
 msgid "Failed to deactivate product"
 msgstr "製品の無効化に失敗しました"
 
