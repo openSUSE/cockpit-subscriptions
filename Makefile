@@ -49,6 +49,7 @@ LINGUAS=$(basename $(notdir $(wildcard po/*.po)))
 
 po/$(PACKAGE_NAME).js.pot:
 	xgettext --default-domain=$(PACKAGE_NAME) --output=- --language=C --keyword= \
+		--sort-by-file \
 		--add-comments=Translators: \
 		--no-git \
 		--keyword=_:1,1t --keyword=_:1c,2,2t --keyword=C_:1c,2 \
@@ -66,7 +67,7 @@ po/$(PACKAGE_NAME).manifest.pot: $(NODE_MODULES_TEST) $(COCKPIT_REPO_STAMP)
 	pkg/lib/manifest2po src/manifest.json -o $@
 
 po/$(PACKAGE_NAME).metainfo.pot: $(APPSTREAMFILE)
-	xgettext --no-git --default-domain=$(PACKAGE_NAME) --output=$@ $<
+	xgettext --sort-by-file --no-git --default-domain=$(PACKAGE_NAME) --output=$@ $<
 
 po/$(PACKAGE_NAME).pot: po/$(PACKAGE_NAME).html.pot po/$(PACKAGE_NAME).js.pot po/$(PACKAGE_NAME).manifest.pot po/$(PACKAGE_NAME).metainfo.pot
 	msgcat --sort-output --output-file=$@ $^
