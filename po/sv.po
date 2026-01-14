@@ -15,152 +15,155 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-18 09:15+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-14 08:04+0000\n"
+"Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
+"Language-Team: Swedish <https://l10n.opensuse.org/projects/cockpit/cockpit-"
+"subscriptions/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Cockpit manifest2po\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr ""
+msgstr "En cockpit modul för att hantera prenumerationer"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
-msgstr ""
+msgstr "Är du säker på att du vill avregistrera det här systemet?"
 
 #: src/app.tsx:271
 msgid "Available Extensions"
-msgstr ""
+msgstr "Tillgängliga tillägg"
 
 #: src/components/confirmation_dialog.tsx:43
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr ""
+msgstr "Cockpit prenumerationer"
 
 #: src/components/register_code_form.tsx:58
 msgid "Custom"
-msgstr ""
+msgstr "Anpassad"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
-msgstr ""
+msgstr "Avregistrera"
 
 #: src/components/confirmation_dialog.tsx:36
 msgid "Delete"
-msgstr ""
+msgstr "Radera"
 
 #: src/app.tsx:251
 msgid "Edit Settings"
-msgstr ""
+msgstr "Redigera inställningar"
 
 #: src/components/register_code_form.tsx:82
 msgid "Email"
-msgstr ""
+msgstr "E-post"
 
 #: src/components/subscription_list.tsx:47
 msgid "Expires:"
-msgstr ""
+msgstr "Löper ut:"
 
 #: src/app.tsx:194
 msgid "Failed to activate product"
-msgstr ""
+msgstr "Misslyckades med att aktivera produkt"
 
 #: src/app.tsx:160 src/app.tsx:169
 msgid "Failed to deactivate product"
-msgstr ""
+msgstr "Misslyckades med att inaktivera produkt"
 
 #: src/app.tsx:131
 msgid "Failed to register system"
-msgstr ""
+msgstr "Misslyckades med att registrera system"
 
 #: src/app.tsx:94
 msgid "Failed to retrieve extensions"
-msgstr ""
+msgstr "Misslyckades med att hämta tillägg"
 
 #: src/app.tsx:77
 msgid "Failed to retrieve subscriptions"
-msgstr ""
+msgstr "Misslyckades med att hämta prenumerationer"
 
 #: src/components/settings_form.tsx:100
 msgid "Language"
-msgstr ""
+msgstr "Språk"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr ""
+msgstr "Laddar prenumerationer"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
-msgstr ""
+msgstr "Proxy Url"
 
 #: src/components/reboot_dialog.tsx:24
 msgid "Reboot"
-msgstr ""
+msgstr "Starta om"
 
 #: src/components/register_code_form.tsx:89
 #: src/components/subscription_list.tsx:63
 msgid "Register"
-msgstr ""
+msgstr "Registrera"
 
 #: src/app.tsx:256
 msgid "Register a new subscription"
-msgstr ""
+msgstr "Registrera en ny prenumeration"
 
 #: src/app.tsx:263
 msgid "Registered Subscriptions"
-msgstr ""
+msgstr "Registrerade prenumerationer"
 
 #: src/components/register_code_form.tsx:77
 msgid "Registration Code"
-msgstr ""
+msgstr "Registreringskod"
 
 #: src/components/register_code_form.tsx:54
 msgid "Registration Server"
-msgstr ""
+msgstr "Registreringsserver"
 
 #: src/components/register_code_form.tsx:57
 msgid "SUSE Customer Center (SCC)"
-msgstr ""
+msgstr "SUSE Customer Center (SCC)"
 
 #: src/components/register_code_form.tsx:67
 msgid "Server URL"
-msgstr ""
+msgstr "Server URL"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
 msgid "Subscriptions"
-msgstr ""
+msgstr "Prenumerationer"
 
 #: src/components/subscription_list.tsx:55
 msgid "This action cannot be undone"
-msgstr ""
+msgstr "Den här åtgärden kan inte ångras"
 
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
-msgstr ""
+msgstr "Detta kräver en omstart"
 
 #: src/components/reboot_dialog.tsx:21
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr ""
+"Detta kräver en omstart för att träda i kraft. Om du inte startar om nu "
+"kanske ändringen inte inkluderas"
 
 #: src/app.tsx:231
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr ""
+msgstr "Att visa eller ändra prenumerationer kräver administratörsåtkomst."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
-msgstr ""
+msgstr "spara"
