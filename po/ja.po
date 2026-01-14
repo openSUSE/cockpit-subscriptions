@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-13 11:34+0000\n"
-"PO-Revision-Date: 2026-01-14 04:04+0000\n"
+"PO-Revision-Date: 2026-01-14 05:15+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/cockpit/cockpit-"
 "subscriptions/ja/>\n"
@@ -72,10 +72,8 @@ msgid "Expires:"
 msgstr "期限切れ日時:"
 
 #: src/app.tsx:194
-#, fuzzy
-#| msgid "Failed to deactivate product"
 msgid "Failed to activate product"
-msgstr "製品の無効化に失敗しました"
+msgstr "製品の有効化に失敗しました"
 
 #: src/app.tsx:160 src/app.tsx:169
 msgid "Failed to deactivate product"
@@ -127,18 +125,16 @@ msgid "Registration Code"
 msgstr "登録コード"
 
 #: src/components/register_code_form.tsx:54
-#, fuzzy
-#| msgid "Registration Code"
 msgid "Registration Server"
-msgstr "登録コード"
+msgstr "登録サーバ"
 
 #: src/components/register_code_form.tsx:57
 msgid "SUSE Customer Center (SCC)"
-msgstr ""
+msgstr "SUSE Customer Center (SCC)"
 
 #: src/components/register_code_form.tsx:67
 msgid "Server URL"
-msgstr ""
+msgstr "サーバ URL"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
