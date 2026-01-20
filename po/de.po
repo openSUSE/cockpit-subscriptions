@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-13 11:34+0000\n"
-"PO-Revision-Date: 2026-01-16 21:04+0000\n"
+"PO-Revision-Date: 2026-01-20 05:04+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/cockpit/cockpit-"
 "subscriptions/de/>\n"
@@ -29,7 +29,7 @@ msgstr ""
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr "Ein Cockpit Modul zum Verwalten von Subskriptionen"
+msgstr "Ein Cockpit-Modul zur Verwaltung von Subskriptionen"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
@@ -45,11 +45,11 @@ msgstr "Abbrechen"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr "Cockpit Subskriptionen"
+msgstr "Cockpit-Subskriptionen"
 
 #: src/components/register_code_form.tsx:58
 msgid "Custom"
-msgstr ""
+msgstr "Benutzerdefiniert"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
@@ -97,7 +97,7 @@ msgstr "Sprache"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr "Lade Subskriptionen"
+msgstr "Subskriptionen werden geladen"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
@@ -163,7 +163,8 @@ msgstr ""
 #: src/app.tsx:231
 msgid "Viewing or modifying subscriptions requires administrative access."
 msgstr ""
-"Betrachten und Ändern von Subskriptionen erfordert Administratorrechte."
+"Zum Betrachten oder Ändern von Subskriptionen ist Administratorzugriff "
+"erforderlich."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
