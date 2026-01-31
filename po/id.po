@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-13 11:34+0000\n"
-"PO-Revision-Date: 2026-01-23 18:04+0000\n"
+"PO-Revision-Date: 2026-01-31 05:04+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/cockpit/"
 "cockpit-subscriptions/id/>\n"
@@ -127,10 +127,8 @@ msgid "Registration Code"
 msgstr "Kode Registrasi"
 
 #: src/components/register_code_form.tsx:54
-#, fuzzy
-#| msgid "Registration Code"
 msgid "Registration Server"
-msgstr "Kode Pendaftaran"
+msgstr "Server Registrasi"
 
 #: src/components/register_code_form.tsx:57
 msgid "SUSE Customer Center (SCC)"
