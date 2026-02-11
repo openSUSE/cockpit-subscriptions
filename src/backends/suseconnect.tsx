@@ -87,10 +87,21 @@ export class SuseConnect implements Backend {
             options.push("--url", url, "--write-config");
         }
         console.log(["suseconnect", ...options].join(" "));
-        return cockpit.spawn(["suseconnect", ...options], { superuser: "require" })
+        return cockpit.spawn(["suseconnect", ...options], { superuser: "require", err: "message" })
                         .then((result): [boolean, string] => {
                             console.debug("registration result", result);
                             return [result.includes("Successfully registered system"), ""];
+                        })
+                        .catch((error: CockpitSpawnError, data?: string): [boolean, string] | Promise<[boolean, string]> => {
+                            if (data) {
+                                console.log(data);
+                                const matched = [...data.matchAll(/Error: (.*?)$/gm)];
+                                if (matched && matched[0]) {
+                                    error.message = matched[0][1];
+                                }
+                            }
+
+                            return new Promise<[boolean, string]>(() => { throw new Error(error.message) });
                         });
     }
 

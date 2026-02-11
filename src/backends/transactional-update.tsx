@@ -94,9 +94,16 @@ export class TransactionalUpdate implements Backend {
                             console.debug("registration result", result);
                             return [result.includes("Successfully registered system"), result];
                         })
-                        .catch((error: CockpitSpawnError, data?: string): [boolean, string] => {
-                            console.error("Failed to register system with", error);
-                            return [false, data || error.toString()];
+                        .catch((error: CockpitSpawnError, data?: string): [boolean, string] | Promise<[boolean, string]> => {
+                            if (data) {
+                                console.log(data);
+                                const matched = [...data.matchAll(/Error: (.*?)$/gm)];
+                                if (matched && matched[0]) {
+                                    error.message = matched[0][1];
+                                }
+                            }
+
+                            return new Promise<[boolean, string]>(() => { throw new Error(error.message) });
                         });
     }
 
