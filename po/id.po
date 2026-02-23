@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-13 11:34+0000\n"
-"PO-Revision-Date: 2026-01-31 05:04+0000\n"
+"PO-Revision-Date: 2026-02-23 13:04+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/cockpit/"
 "cockpit-subscriptions/id/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 5.16\n"
 
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
@@ -72,10 +72,8 @@ msgid "Expires:"
 msgstr "Kedaluwarsa:"
 
 #: src/app.tsx:194
-#, fuzzy
-#| msgid "Failed to deactivate product"
 msgid "Failed to activate product"
-msgstr "Gagal menonaktifkan produk"
+msgstr "Gagal mengaktifkan produk"
 
 #: src/app.tsx:160 src/app.tsx:169
 msgid "Failed to deactivate product"
