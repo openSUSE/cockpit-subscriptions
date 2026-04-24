@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-13 11:34+0000\n"
-"PO-Revision-Date: 2025-08-07 00:59+0000\n"
-"Last-Translator: Javier Llorente <javier@opensuse.org>\n"
+"PO-Revision-Date: 2026-04-24 17:04+0000\n"
+"Last-Translator: Victor hck <victorhck@opensuse.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/cockpit/cockpit-"
 "subscriptions/es/>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.17\n"
 
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
@@ -49,7 +49,7 @@ msgstr "Suscripciones de Cockpit"
 
 #: src/components/register_code_form.tsx:58
 msgid "Custom"
-msgstr ""
+msgstr "Personalizar"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
@@ -72,10 +72,8 @@ msgid "Expires:"
 msgstr "Caduca:"
 
 #: src/app.tsx:194
-#, fuzzy
-#| msgid "Failed to deactivate product"
 msgid "Failed to activate product"
-msgstr "Error al desactivar el producto"
+msgstr "Error al activar el producto"
 
 #: src/app.tsx:160 src/app.tsx:169
 msgid "Failed to deactivate product"
@@ -127,18 +125,16 @@ msgid "Registration Code"
 msgstr "Código de registro"
 
 #: src/components/register_code_form.tsx:54
-#, fuzzy
-#| msgid "Registration Code"
 msgid "Registration Server"
-msgstr "Código de registro"
+msgstr "Servidor de registro"
 
 #: src/components/register_code_form.tsx:57
 msgid "SUSE Customer Center (SCC)"
-msgstr ""
+msgstr "Centro de atención al cliente de SUSE (SCC)"
 
 #: src/components/register_code_form.tsx:67
 msgid "Server URL"
-msgstr ""
+msgstr "URL del servidor"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
