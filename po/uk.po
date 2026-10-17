@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-18 09:15+0000\n"
-"PO-Revision-Date: 2026-08-05 21:13+0000\n"
+"PO-Revision-Date: 2026-10-17 17:13+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/cockpit/cockpit-"
 "subscriptions/uk/>\n"
@@ -25,20 +25,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2026.8\n"
+"X-Generator: Weblate 2026.10.1\n"
 
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:6
 #: org.opensuse.cockpit_subscriptions.metainfo.xml:8
 msgid "A cockpit module for managing subscriptions"
-msgstr ""
+msgstr "Модуль cockpit для управління підписками"
 
 #: src/components/subscription_list.tsx:55
 msgid "Are you sure you want to de-register this system?"
-msgstr ""
+msgstr "Ви впевнені, що хочете скасувати реєстрацію цієї системи?"
 
 #: src/app.tsx:271
 msgid "Available Extensions"
-msgstr ""
+msgstr "Доступні розширення"
 
 #: src/components/confirmation_dialog.tsx:43
 msgid "Cancel"
@@ -46,15 +46,15 @@ msgstr "Скасувати"
 
 #: src/index.html:20
 msgid "Cockpit Subscriptions"
-msgstr ""
+msgstr "Підписки Cockpit"
 
 #: src/components/register_code_form.tsx:58
 msgid "Custom"
-msgstr ""
+msgstr "Власне"
 
 #: src/components/subscription_list.tsx:56
 msgid "De-register"
-msgstr ""
+msgstr "Зняти реєстрацію"
 
 #: src/components/confirmation_dialog.tsx:36
 msgid "Delete"
@@ -62,60 +62,60 @@ msgstr "Видалити"
 
 #: src/app.tsx:251
 msgid "Edit Settings"
-msgstr ""
+msgstr "Зміна налаштувань"
 
 #: src/components/register_code_form.tsx:82
 msgid "Email"
-msgstr ""
+msgstr "E-пошта"
 
 #: src/components/subscription_list.tsx:47
 msgid "Expires:"
-msgstr ""
+msgstr "Добігає кінця:"
 
 #: src/app.tsx:194
 msgid "Failed to activate product"
-msgstr ""
+msgstr "Не вдалося активувати продукт"
 
 #: src/app.tsx:160 src/app.tsx:169
 msgid "Failed to deactivate product"
-msgstr ""
+msgstr "Не вдалося деактивувати продукт"
 
 #: src/app.tsx:131
 msgid "Failed to register system"
-msgstr ""
+msgstr "Не вдалося зареєструвати систему"
 
 #: src/app.tsx:94
 msgid "Failed to retrieve extensions"
-msgstr ""
+msgstr "Не вдалося отримати розширення"
 
 #: src/app.tsx:77
 msgid "Failed to retrieve subscriptions"
-msgstr ""
+msgstr "Не вдалося отримати дані про підписки"
 
 #: src/components/settings_form.tsx:100
 msgid "Language"
-msgstr ""
+msgstr "Мова"
 
 #: src/components/subscription_list.tsx:28
 msgid "Loading Subscriptions"
-msgstr ""
+msgstr "Завантаження підписок"
 
 #: src/components/settings_form.tsx:85
 msgid "Proxy Url"
-msgstr ""
+msgstr "URL-адреса проксі-сервера"
 
 #: src/components/reboot_dialog.tsx:24
 msgid "Reboot"
-msgstr ""
+msgstr "Перезапуск"
 
 #: src/components/register_code_form.tsx:89
 #: src/components/subscription_list.tsx:63
 msgid "Register"
-msgstr ""
+msgstr "Зареєструвати"
 
 #: src/app.tsx:256
 msgid "Register a new subscription"
-msgstr ""
+msgstr "Оформити нову підписку"
 
 #: src/app.tsx:263
 msgid "Registered Subscriptions"
