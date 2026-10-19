@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-18 09:15+0000\n"
-"PO-Revision-Date: 2026-10-17 17:13+0000\n"
+"PO-Revision-Date: 2026-10-19 20:13+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/cockpit/cockpit-"
 "subscriptions/uk/>\n"
@@ -119,50 +119,52 @@ msgstr "Оформити нову підписку"
 
 #: src/app.tsx:263
 msgid "Registered Subscriptions"
-msgstr ""
+msgstr "Зареєстровані підписки"
 
 #: src/components/register_code_form.tsx:77
 msgid "Registration Code"
-msgstr ""
+msgstr "Реєстраційний код"
 
 #: src/components/register_code_form.tsx:54
 msgid "Registration Server"
-msgstr ""
+msgstr "Сервер реєстрації"
 
 #: src/components/register_code_form.tsx:57
 msgid "SUSE Customer Center (SCC)"
-msgstr ""
+msgstr "Центр обслуговування клієнтів SUSE (SCC)"
 
 #: src/components/register_code_form.tsx:67
 msgid "Server URL"
-msgstr ""
+msgstr "URL сервера"
 
 #: src/components/settings_dialog.tsx:20
 msgid "Settings"
-msgstr ""
+msgstr "Налаштування"
 
 #: src/manifest.json:0 org.opensuse.cockpit_subscriptions.metainfo.xml:5
 msgid "Subscriptions"
-msgstr ""
+msgstr "Підписки"
 
 #: src/components/subscription_list.tsx:55
 msgid "This action cannot be undone"
-msgstr ""
+msgstr "Цю дію не можна скасувати"
 
 #: src/components/reboot_dialog.tsx:18
 msgid "This requires a reboot"
-msgstr ""
+msgstr "Для цього потрібно перезавантажити систему"
 
 #: src/components/reboot_dialog.tsx:21
 msgid ""
 "This requires a reboot to take effect. If you don't reboot now, this change "
 "might not be included"
 msgstr ""
+"Щоб ці зміни набули чинності, потрібно перезавантажити систему. Якщо ви не "
+"перезавантажите систему зараз, ці зміни можуть не бути застосовані"
 
 #: src/app.tsx:231
 msgid "Viewing or modifying subscriptions requires administrative access."
-msgstr ""
+msgstr "Для перегляду або редагування підписок необхідні права адміністратора."
 
 #: src/components/settings_form.tsx:108
 msgid "save"
-msgstr ""
+msgstr "зберегти"
